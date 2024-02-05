@@ -1,0 +1,11 @@
+## TRANSFORM RESULTS INTO NNT
+
+library(dmetar)
+
+## EMPLOYMENT: CER 0.45
+## EDUCATION: CER 0.3
+
+NNT(0.23, CER = 0.45)
+NNT(0.06, CER = 0.45)
+NNT(0.40, CER = 0.45)
+
