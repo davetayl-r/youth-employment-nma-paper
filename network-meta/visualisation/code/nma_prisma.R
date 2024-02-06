@@ -22,7 +22,7 @@ prisma_figure <- PRISMA_flowdiagram(
   other = TRUE,
   fontsize = 10,
   font = "Helvetica",
-  #title_colour = "Goldenrod1",
+  title_colour = "Goldenrod1",
   greybox_colour = "Gainsboro",
   main_colour = "Black",
   arrow_colour = "Black",
@@ -30,6 +30,7 @@ prisma_figure <- PRISMA_flowdiagram(
   arrow_tail = "none",
   side_boxes = TRUE
 )
+
 # view figure
 prisma_figure
 

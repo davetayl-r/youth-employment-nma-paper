@@ -23,7 +23,7 @@ component_data <- read_sheet(
 
 ## COMPONENT BREAKDOWN
 
-total <- 60
+total <- 58
 
 ## APPRENTICESHIPS
 

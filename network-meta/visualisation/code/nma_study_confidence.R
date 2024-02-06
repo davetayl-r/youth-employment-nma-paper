@@ -8,7 +8,7 @@ library(ggplot2)
 
 ## READ DATA
 
-included_studies_confidence_data_location <- "./nma/context-data/quality_appraisal_information.RDS"
+included_studies_confidence_data_location <- "./network-meta/nma/context-data/quality_appraisal_information.RDS"
 included_studies_confidence_data <- readRDS(included_studies_confidence_data_location)
 
 ## CLEAN DATA
@@ -131,7 +131,7 @@ study_confidence_plot <- study_confidence_plot_data %>%
   ) 
 
 ggsave(
-  file = "./visualisation/output/nma_study_confidence.png",
+  file = "./network-meta/visualisation/output/nma_study_confidence.png",
   plot = study_confidence_plot, 
   width = 10, 
   height = 8, 

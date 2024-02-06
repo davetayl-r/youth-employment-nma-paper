@@ -14,7 +14,7 @@ component_data <- read_sheet(
   ss = component_data_location,
   sheet = "component_combinations")
 
-employment_es_data_location <- "./es-transformation/output/employment_es_data.RDS"
+employment_es_data_location <- "./network-meta/es-transformation/output/employment_es_data.RDS"
 
 employment_es_data <- readRDS(employment_es_data_location)
 
@@ -136,140 +136,12 @@ named_employment_component_data <- employment_component_data %>%
   mutate(comparison_accreditation = case_when(
     comparison_accreditation == "Yes" ~ "ACCRED"))
 
-## DECLARE YFF AREAS OF INTEREST
-
-yff_other_interest <- c(
-  "C-MGMT",
-  "P-WRKEXP",
-  "REF",
-  "COUNSL",
-  "ACC")
-
-## SUBSET DATA TO AREAS OF INTEREST TO YFF
-
-subset_employment_component_data <- named_employment_component_data %>%
-  mutate(intervention_other_breakdown = case_when(
-    intervention_job_placement_assistance == "JOB-PLC" ~ "OTH",
-    intervention_unpaid_work_experience == "U-WRKEXP" ~ "OTH",
-    intervention_supported_paid_employment == "SUP-EMP" ~ "OTH",
-    intervention_volunteer_work_unpaid == "VOL" ~ "OTH",
-    intervention_group_peer_support == "PEER" ~ "OTH",
-    intervention_entrepreneurship_business_skills == "ENTRE" ~ "OTH",
-    intervention_behavioural_psychological == "BEHAV" ~ "OTH",
-    intervention_wage_subsidies == "WG-SUB" ~ "OTH",
-    intervention_transportation_to_work == "TRANS" ~ "OTH",
-    intervention_sports_club_activity == "S&R" ~ "OTH",
-    intervention_residential == "RESI" ~ "OTH",
-    intervention_remediation == "REM-ED" ~ "OTH",
-    intervention_accreditation == "ACCRED" ~ "OTH")) %>%
-  mutate(comparison_other_breakdown = case_when(
-    comparison_job_placement_assistance == "JOB-PLC" ~ "OTH",
-    comparison_unpaid_work_experience == "U-WRKEXP" ~ "OTH",
-    comparison_supported_paid_employment == "SUP-EMP" ~ "OTH",
-    comparison_volunteer_work_unpaid == "VOL" ~ "OTH",
-    comparison_group_peer_support == "PEER" ~ "OTH",
-    comparison_entrepreneurship_business_skills == "ENTRE" ~ "OTH",
-    comparison_behavioural_psychological == "BEHAV" ~ "OTH",
-    comparison_wage_subsidies == "WG-SUB" ~ "OTH",
-    comparison_transportation_to_work == "TRANS" ~ "OTH",
-    comparison_sports_club_activity == "S&R" ~ "OTH",
-    comparison_residential == "RESI" ~ "OTH",
-    comparison_remediation == "REM-ED" ~ "OTH",
-    comparison_accreditation == "ACCRED" ~ "OTH")) %>%
-  select(
-    study,
-    intervention_basic_skills,
-    intervention_life_skills,
-    intervention_off_job_training,
-    intervention_on_the_job_training,
-    intervention_apprenticeships,
-    intervention_coaching_mentoring,
-    intervention_other,
-    intervention_other_breakdown,
-    intervention_case_management,
-    intervention_paid_work_experience,
-    intervention_referrals_brokerage,
-    intervention_counseling,
-    intervention_program_access,
-    comparison,
-    comparison_services_as_usual_only,
-    comparison_basic_skills,
-    comparison_life_skills,
-    comparison_off_job_training,
-    comparison_on_the_job_training,
-    comparison_apprenticeships,
-    comparison_coaching_mentoring,
-    comparison_other,
-    comparison_other_breakdown,
-    comparison_case_management,
-    comparison_paid_work_experience,
-    comparison_referrals_brokerage,
-    comparison_counseling,
-    comparison_program_access)
-
-## EXPORT COMPONENT DATA FOR PLOTTING
-
+# export component data for plotting
 subset_employment_component_data %>%
-  saveRDS("./visualisation/input/employment_component_breakdown.RDS")
+  saveRDS("./network-meta/visualisation/input/employment_component_breakdown.RDS")
 
-## PREPARE DATA FOR SPECIFICATION ONE: CORE COMPONENTS VERSUS SAU
-
-employment_treatment_core_components_comparison_sau <- subset_employment_component_data %>%
-  select(
-    study,                              
-    intervention_basic_skills,                    
-    intervention_life_skills,                     
-    intervention_off_job_training,                
-    intervention_on_the_job_training,              
-    intervention_apprenticeships,                
-    intervention_coaching_mentoring,               
-    intervention_other,                               
-    comparison) %>%
-  unite(intervention,
-      starts_with("intervention"), 
-      sep = "+", 
-      na.rm = TRUE, 
-      remove = TRUE) %>%
-  ## Remove studies with no active components in treatment group
-  filter(
-    !intervention == "OTH"
-  )
-
-## PREPARE DATA FOR SPECIFICATION TWO: CORE COMPONENTS + OTHER VERSUS SAU
-
-employment_treatment_detailed_heterogeneity_comparison_sau <- subset_employment_component_data %>%
-  select(
-    study,                              
-    intervention_basic_skills,                    
-    intervention_life_skills,                     
-    intervention_off_job_training,                
-    intervention_on_the_job_training,              
-    intervention_apprenticeships,                
-    intervention_coaching_mentoring,               
-    intervention_case_management,
-    intervention_paid_work_experience,
-    intervention_referrals_brokerage,
-    intervention_counseling,
-    intervention_program_access,                               
-    intervention_other_breakdown,
-    comparison) %>%
-  unite(intervention,
-        starts_with('intervention'), 
-        sep = "+", 
-        na.rm = TRUE, 
-        remove = TRUE) %>%
-  ## Remove studies with no active components in treatment group
-  filter(
-    !intervention == "OTH",
-    !intervention == "P-WRKEXP",
-    !intervention == "C-MGMT+OTH",
-    !intervention == "C-MGMT+REF+COUNSL",
-    !intervention == "C-MGMT+P-WRKEXP+COUNSL+OTH",
-    !intervention == "C-MGMT+REF+COUNSL+OTH")
-
-## PREPARE DATA SPECIFICATION THREE: CORE COMPONENTS VERSUS SAU COMPONENT HETEROGENEITY
-
-employment_treatment_comparison_core_components <- subset_employment_component_data %>%
+# prepare specification for analysis
+employment_treatment_comparison_core_components <- named_employment_component_data %>%
   select(
     study,                              
     intervention_basic_skills,                    
@@ -302,82 +174,13 @@ employment_treatment_comparison_core_components <- subset_employment_component_d
     !intervention == "OTH"
   )
 
-## PREPARE DATA FOR SPECIFICATION FOUR: TREATMENT AND COMPARISON DETAILED HETEROGENEITY
-
-employment_treatment_comparison_detailed_heterogeneity <- subset_employment_component_data %>%
-  select(
-    study,                              
-    intervention_basic_skills,                    
-    intervention_life_skills,                     
-    intervention_off_job_training,                
-    intervention_on_the_job_training,              
-    intervention_apprenticeships,                
-    intervention_coaching_mentoring,               
-    intervention_case_management,
-    intervention_paid_work_experience,
-    intervention_referrals_brokerage,
-    intervention_counseling,
-    intervention_program_access,
-    intervention_other_breakdown,
-    comparison_services_as_usual_only,            
-    comparison_basic_skills,                       
-    comparison_life_skills,                       
-    comparison_off_job_training,                   
-    comparison_on_the_job_training,               
-    comparison_apprenticeships,                   
-    comparison_coaching_mentoring,                
-    comparison_case_management,               
-    comparison_paid_work_experience,      
-    comparison_referrals_brokerage,
-    comparison_counseling,
-    comparison_program_access,                     
-    comparison_other) %>%
-  unite(intervention,
-        starts_with('intervention'), 
-        sep = "+", 
-        na.rm = TRUE, 
-        remove = TRUE) %>%
-  unite(comparison,
-        starts_with("comparison"), 
-        sep = "+", 
-        na.rm = TRUE, 
-        remove = TRUE) %>%
-  ## Remove studies with no active components in treatment group
-  filter(
-    !intervention == "OTH",
-    !intervention == "P-WRKEXP",
-    !intervention == "C-MGMT+OTH",
-    !intervention == "C-MGMT+REF+COUNSL",
-    !intervention == "C-MGMT+P-WRKEXP+COUNSL+OTH",
-    !intervention == "C-MGMT+REF+COUNSL+OTH"
-  )
-
-## MERGE & EXPORT DATA FOR EACH ANALYSIS
-
-employment_included_studies <- employment_treatment_core_components_comparison_sau %>%
+# export data
+employment_included_studies <- employment_treatment_comparison_core_components %>%
   select(study) %>%
-  saveRDS("./nma/context-data/employment_include_studies_list_final.RDS")
-
-employment_treatment_core_components_comparison_sau %>%
-  left_join(
-    employment_es_data,
-    by = "study") %>%
-  saveRDS("./nma/meta-data/employment_analysis_data_specification_one.RDS")
-
-employment_treatment_detailed_heterogeneity_comparison_sau %>%
-  left_join(
-    employment_es_data,
-    by = "study") %>%
-  saveRDS("./nma/meta-data/employment_analysis_data_specification_two.RDS")
+  saveRDS("./network-meta/nma/context-data/employment_include_studies_list_final.RDS")
 
 employment_treatment_comparison_core_components %>%
   left_join(
     employment_es_data,
     by = "study") %>%
-  saveRDS("./nma/meta-data/employment_analysis_data_specification_three.RDS")
-
-employment_treatment_comparison_detailed_heterogeneity %>%
-  left_join(
-    employment_es_data,
-    by = "study") %>%
-  saveRDS("./nma/meta-data/employment_analysis_data_specification_four.RDS")
+  saveRDS("./network-meta/nma/meta-data/employment_analysis_data.RDS")
