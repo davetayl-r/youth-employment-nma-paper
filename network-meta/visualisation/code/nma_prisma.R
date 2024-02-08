@@ -16,7 +16,6 @@ prisma_data <- PRISMA_data(raw_prisma_data)
 prisma_figure <- PRISMA_flowdiagram(
   data = prisma_data,
   interactive = FALSE,
-  #databases = TRUE,
   detail_databases = TRUE,
   previous = FALSE,
   other = TRUE,
@@ -36,7 +35,7 @@ prisma_figure
 
 # export figure
 PRISMA_save(
-  plotobj = prisma_figure, 
+  plotobj = prisma_figure,
   filename = "./network-meta/visualisation/output/nma_prisma_flowchart.png",
   filetype = "png",
   overwrite = TRUE)

@@ -1,5 +1,6 @@
+## Effect size transformation
 ## OUTCOME: EDUCATION COMPLETION — HIGH SCHOOL OR EQUIVALENT
-## EFFECT SIZE TRANSFORMATION
+
 
 ## LOAD REQUIRED PACKAGES
 
@@ -15,11 +16,11 @@ raw_education_completion_data <- read_sheet(
   ss = google_sheet_location,
   sheet = "esc_input_hs_grad")
 
-quality_appraisal_location <- "./nma/context-data/quality_appraisal_information.RDS"
+quality_appraisal_location <- "./network-meta/nma/context-data/quality_appraisal_information.RDS"
 
 quality_appraisal_information <- readRDS(quality_appraisal_location)
 
-included_studies_location <- "./nma/context-data/education_included_studies.RDS"
+included_studies_location <- "./network-meta/nma/context-data/education_included_studies.RDS"
 
 included_studies_information <- readRDS(included_studies_location)
 
