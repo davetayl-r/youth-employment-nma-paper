@@ -1,15 +1,13 @@
-## OUTCOME: EMPLOYMENT
-## EFFECT SIZE TRANSFORMATION
+## Effect size transformation
+# Outcome: employment 
 
-## LOAD REQUIRED PACKAGES
-
+# load required packages
 library(googlesheets4)
 library(tidyverse)
 library(esc)
 library(meta)
 
-## READ DATA
-
+# read required data data
 google_sheet_location <- "https://docs.google.com/spreadsheets/d/1wdBGAF1I1H0LegEoEIIuo2I5pktl6UbDF5Qd37PxLsc/edit#gid=364556614"
 
 raw_employment_completion_data <- read_sheet(
@@ -22,8 +20,7 @@ quality_appraisal_information <- readRDS(quality_appraisal_location)
 included_studies_location <- "./nma/context-data/employment_included_studies.RDS"
 included_studies_information <- readRDS(included_studies_location)
 
-## CLEAN ES DATA
-
+# clean effect size input data
 clean_employment_completion_data <- raw_employment_completion_data %>%
   select(
     "Study Reference",
@@ -49,14 +46,14 @@ clean_employment_completion_data <- raw_employment_completion_data %>%
     te_ci_high = "Reported TE 95 per cent CI (upper)",
     ) 
 
-## SUBSET STUDY LOCATION AND QUALITY APPRAISAL DATA
-
+# subset quality appraisal data
 quality_appraisal_employment_subset <- quality_appraisal_information %>%
   rename(
     study_ref = study_reference
   ) %>%
   dplyr::filter(study_ref %in% clean_employment_completion_data$study_ref) 
 
+# subset study location data
 study_location_design_employment_subset <- included_studies_information %>%
   select(
     -`Primary reference`
@@ -71,14 +68,12 @@ study_location_design_employment_subset <- included_studies_information %>%
   )) %>%
   dplyr::filter(study_ref %in% clean_employment_completion_data$study_ref)
   
-## MERGE WITH EMPLOYMENT ES DATA
-
+# merge with employment effect size data
 subset_employment_completion_data <- clean_employment_completion_data %>%
   left_join(quality_appraisal_employment_subset, by = "study_ref") %>%
   left_join(study_location_design_employment_subset, by = "study_ref") 
   
-## CONVERT TO COMMON EFFECT SIZE
-
+# convert to common effect size
 employment_binary_proportions_data <- subset_employment_completion_data %>%
   filter(esc_type == "binary_proportion") %>%
   effect_sizes(
@@ -183,8 +178,7 @@ employment_mean_diff_data <- subset_employment_completion_data %>%
     measure
   )
 
-## MERGE DIFFERENT ES DATA
-
+# merge effect size data
 merged_employment_es_data <- bind_rows(
   employment_binary_proportions_data,
   employment_odds_ratio_data,
@@ -195,8 +189,7 @@ merged_employment_es_data <- bind_rows(
   employment_chi_square_data,
   employment_mean_diff_data)
 
-## COMBINE RESULTS FROM STUDIES THAT REPORT SUBGROUPS SEPERATELY
-
+# combine results from studies that report subgroups seperately
 preparatory_training_2011_germany_seperate <- employment_unstandard_regression_data %>%
   filter(study %in% c(
     "7A_Preparatory_Training_2011_Germany"))
@@ -358,8 +351,7 @@ ndyp_2004_uk_combined <- data.frame(
   ci.hi = ndyp_2004_uk_meta$upper.random,
   measure = "g")
 
-## MERGE SEPERATE DATA FRAMES WITH COMBINED ES DATA
-
+# merge seperate data frames with combined effect size data 
 merged_combined_es_data <- bind_rows(
   preparatory_training_2011_germany_combined,
   short_term_training_2011_germany_combined,
@@ -369,21 +361,12 @@ merged_combined_es_data <- bind_rows(
   yei_2020_portugal_combined,
   ndyp_2004_uk_combined)
 
-## REMOVE STUDIES FROM ES DATA THAT WERE REPORTED SEPERATELY, THEN ADD BACK THE COMBINED ONES
-
+# remove studies from effect size data that were reported seperately, then add back the combined ones
 clean_employment_es_data <- merged_employment_es_data %>%
   dplyr::filter(!study %in% merged_combined_es_data$study) %>%
   bind_rows(merged_combined_es_data)
 
-## CHECKS:
-## 1. Count of original es: 69
-## 2. Individual records requiring synthesis: 14
-## 3. Count of original es, less records requiring synthesis (1-3): 55
-## 4. Count of merged es records: 7
-## 5. Unique records (3+4): 62
-
-## MERGE WITH CLEAN DATA TO GET INFORMATION FOR SUBGROUP ANALYSIS
-
+# merge with clean data to include required information for subgroup analysis
 subgroup_info_employment_es_data <- subset_employment_completion_data %>%
   select(
     study_ref,
@@ -402,8 +385,7 @@ export_employment_es_data <- subgroup_info_employment_es_data %>%
   left_join(clean_employment_es_data, by = "study") %>%
   filter(study %in% included_studies_information$`Study reference`)
 
-## EXPORT DATA FOR NMA
-
+# export data for nma
 export_employment_es_data %>%
   saveRDS(
-    "./es-transformation/output/employment_es_data.RDS")
+    "./network-meta/nma/es-transformation/output/employment_es_data.RDS")

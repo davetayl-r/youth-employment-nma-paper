@@ -1,15 +1,12 @@
 ## Effect size transformation
-## OUTCOME: EDUCATION COMPLETION — HIGH SCHOOL OR EQUIVALENT
+# Outcome: Education completion — high school or equivalent
 
-
-## LOAD REQUIRED PACKAGES
-
+# load required packages
 library(googlesheets4)
 library(tidyverse)
 library(esc)
 
-## READ DATA
-
+# read required data data
 google_sheet_location <- "https://docs.google.com/spreadsheets/d/1m5r4IvU-TruXkBH2w2Z88xQYHRNGFSYuMWppr19f7U8/edit#gid=42105740"
 
 raw_education_completion_data <- read_sheet(
@@ -17,15 +14,12 @@ raw_education_completion_data <- read_sheet(
   sheet = "esc_input_hs_grad")
 
 quality_appraisal_location <- "./network-meta/nma/context-data/quality_appraisal_information.RDS"
-
 quality_appraisal_information <- readRDS(quality_appraisal_location)
 
 included_studies_location <- "./network-meta/nma/context-data/education_included_studies.RDS"
-
 included_studies_information <- readRDS(included_studies_location)
 
-## CLEAN ES DATA
-
+# clean effect size input data
 clean_education_completion_data <- raw_education_completion_data %>%
   select(
     "Study Reference",
@@ -39,10 +33,6 @@ clean_education_completion_data <- raw_education_completion_data %>%
     totaln,
     beta,                                                  
     sdy,
-    #chisq,
-    #t,
-    #f,
-    #te,
     "Reported TE 95 per cent CI (upper)",	
     "Reported TE 95 per cent CI (lower)") %>%
   rename(
@@ -53,14 +43,14 @@ clean_education_completion_data <- raw_education_completion_data %>%
   filter(
     study_ref %in% included_studies_information$`Study reference`)
 
-## SUBSET STUDY LOCATION AND QUALITY APPRAISAL DATA
-
+# subset quality appraisal data
 quality_appraisal_education_subset <- quality_appraisal_information %>%
   rename(
     study_ref = study_reference
   ) %>%
   dplyr::filter(study_ref %in% clean_education_completion_data$study_ref) 
 
+# subset study location data
 study_location_design_education_subset <- included_studies_information %>%
   select(
     -`Primary reference`
@@ -75,14 +65,12 @@ study_location_design_education_subset <- included_studies_information %>%
   )) %>%
   dplyr::filter(study_ref %in% clean_education_completion_data$study_ref)
 
-## MERGE WITH EDUCATION ES DATA
-
+# merge with education effect size data
 subset_education_completion_data <- clean_education_completion_data %>%
   left_join(quality_appraisal_education_subset, by = "study_ref") %>%
   left_join(study_location_design_education_subset, by = "study_ref") 
 
-## CONVERT TO COMMON EFFECT SIZE
-
+# convert to common effect size
 education_binary_proportions_data <- subset_education_completion_data %>%
   filter(esc_type == "binary_proportion") %>%
   effect_sizes(
@@ -115,15 +103,13 @@ education_odds_ratio_data <- subset_education_completion_data %>%
     es.type = "g") %>%
   as.data.frame()
 
-## MERGE ES DATA
-
+# merge effect size data
 merged_education_es_data <- bind_rows(
   education_binary_proportions_data,
   education_regression_data,
   education_odds_ratio_data) 
 
-## MERGE WITH CLEAN DATA TO GET INFORMATION FOR SUBGROUP ANALYSIS
-
+# merge with clean data to include required information for subgroup analysis
 subgroup_info_education_es_data <- subset_education_completion_data %>%
   select(
     study_ref,
@@ -138,8 +124,8 @@ subgroup_info_education_es_data <- subset_education_completion_data %>%
   ) %>%
   distinct()
 
+# export data for nma
 export_education_es_data <- subgroup_info_education_es_data %>%
   left_join(merged_education_es_data, by = "study") %>%
   saveRDS(
-    "./es-transformation/output/education_es_data.RDS")
-
+    "./network-meta/nma/es-transformation/output/education_es_data.RDS")
