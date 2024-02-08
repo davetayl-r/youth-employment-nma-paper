@@ -300,9 +300,21 @@ These categories were further filtered using the following outcome categories:
 
 # Supplementary information about included and excluded studies
 
+## Counting studies
+
+Fifty-eight (n=58) studies — reported in 73 articles — met our inclusion criteria and were included in this review. Of these:
+
+-   Thirty-five (n=35) papers were different reports of other included studies, studies reported in multiple papers were treated as a single study for the purposes of this review. For studies reported in multiple papers, a primary study was selected to serve as the primary reference.
+
+-   Eight (n=8) papers reported analyses of one or more different programs, which were treated as separate studies [@bloomNationalJTPAStudy1993; @caliendo2011fightingyouthunemployment; @davisRethinkingBenefitsYouth2017; @frakerThreeYearEffectsYouth2018; @hollenbeckNetImpactEstimates2006; @hollenbeckNetImpactBenefitCost2016; @maibom2014canactivelabour; @nadonMakingTransitionHow2020]
+
+-   Three (n=3) programmes were evaluated at two time points, 10 years apart, involving different populations and were treated as separate studies [@hollenbeckNetImpactEstimates2006; @hollenbeckNetImpactBenefitCost2016].
+
 +--------------------------------------------------------------------------------------------------------+-------------------------------------------------+-------------------------------------------+
 | Intervention name                                                                                      | Primary reference                               | Secondary reference(s)                    |
 +========================================================================================================+=================================================+===========================================+
+| Independent living programs                                                                            | @kimEstimatingEffectsIndependent2019            | @nadonMakingTransitionHow2020             |
++--------------------------------------------------------------------------------------------------------+-------------------------------------------------+-------------------------------------------+
 | Inserjovem                                                                                             | @centeno2008evaluatingjobsearch                 | @centeno2006avaliacaoimpactoum            |
 +--------------------------------------------------------------------------------------------------------+-------------------------------------------------+-------------------------------------------+
 | Job Corps                                                                                              | @schochetDoesJobCorps2008                       | @schochetNationalJobCorps2001             |
@@ -399,6 +411,20 @@ These categories were further filtered using the following outcome categories:
 +--------------------------------------------------------------------------------------------------------+-------------------------------------------------+-------------------------------------------+
 
 : Distinguishing between multiple reports of the same study {#tbl-ye-nma-multiple-reports} {tbl-colwidths="\[20,40,40\]"}
+
+## Excluded studies
+
+Sixty-eight (n=68) studies were excluded during full-text screening. A selection of these studies and the reasons for their exclusion are detailed in @tbl-ye-nma-full-text-reject.
+
+### Included studies not included in NMA
+
+Of the fifty-eight (n=58) included studies, five (n=5) were not included in a network meta-analysis for either employment status or education completion. They were:
+
+-   A study by @strombackEarningsSchoolingVocational2010 only reported wage outcomes,
+
+-   A study by @feinBridgingOpportunityDivide2018 only reported wage outcomes, and
+
+-   A study by @jastrzabImpactsServiceFinal1996\] did not report sufficient information to allow for the transformation of results to a common effect size.
 
 +-----------------------------------------------------------------+------------------------------------------------+------------------------------------------------------------------+
 | Intervention name                                               | Reference(s)                                   | Rationale                                                        |

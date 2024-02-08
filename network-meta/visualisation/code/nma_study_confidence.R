@@ -1,18 +1,15 @@
-## NMA
-## STUDY QUALITY PLOT
+# Study confidence figure
 
-## LOAD REQUIRED PACKAGES
-
+# load required packages
 library(tidyverse)
 library(ggplot2)
+library(scales)
 
-## READ DATA
-
+# read study confidence data
 included_studies_confidence_data_location <- "./network-meta/nma/context-data/quality_appraisal_information.RDS"
 included_studies_confidence_data <- readRDS(included_studies_confidence_data_location)
 
-## CLEAN DATA
-
+# clean data
 study_confidence_plot_data <- included_studies_confidence_data %>%
   rename(
     `Study design` = qa_domain_1_study_design,
@@ -32,8 +29,8 @@ study_confidence_plot_data <- included_studies_confidence_data %>%
     domain = factor(
       domain,
       levels = c(
-        "Study design", 
-        "Sample size",  
+        "Study design",
+        "Sample size",
         "Attrition",
         "Intervention description",
         "Outcome definition",
@@ -76,8 +73,7 @@ study_confidence_plot_data <- included_studies_confidence_data %>%
       TRUE ~ "other") 
   ) 
 
-## PREPARE PLOT
-
+# prepare plot
 study_confidence_plot <- study_confidence_plot_data %>% 
   ggplot() +
   aes(
@@ -94,23 +90,26 @@ study_confidence_plot <- study_confidence_plot_data %>%
   facet_wrap(
     domain ~ .,
     shrink = FALSE,
-    ncol = 2) +
+    ncol = 4) +
   lims(
     y = c(0,110)
   ) +
   labs(
-    y = "Per cent",
+    y = "Per cent of total studies (n=58)",
     x = "Assessment of study confidence"
+  ) +
+  scale_x_discrete(
+    labels = wrap_format(10)
   ) +
   scale_fill_manual(
     values = c(
-      "Study design" = "#E52E36",
-      "Sample size" = "#F8AA3D",
-      "Attrition" = "#69C2C9",
-      "Intervention description" = "#736E01",
-      "Outcome definition" = "#318187",
-      "Baseline balance" = "#BFB800",
-      "Overall confidence" = "#7D2248"
+      "Study design" = "#5A5A5A",
+      "Sample size" = "#5A5A5A",
+      "Attrition" = "#5A5A5A",
+      "Intervention description" = "#5A5A5A",
+      "Outcome definition" = "#5A5A5A",
+      "Baseline balance" = "#5A5A5A",
+      "Overall confidence" = "#006DAE"
     )
   ) +
   theme(
@@ -130,9 +129,10 @@ study_confidence_plot <- study_confidence_plot_data %>%
     )
   ) 
 
+# export plot
 ggsave(
   file = "./network-meta/visualisation/output/nma_study_confidence.png",
   plot = study_confidence_plot, 
   width = 10, 
-  height = 8, 
+  height = 6, 
   type = "cairo-png")
