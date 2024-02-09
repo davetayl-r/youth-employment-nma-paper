@@ -1,38 +1,36 @@
-## NMA: EMPLOYMENT OUTCOME
+# components of included studies
 
-## LOAD REQUIRED PACKAGES
-
+# load required packages
+library(googlesheets4)
 library(tidyverse)
 library(ggplot2)
 library(scales)
 
-## READ DATA
-
+# read data
 component_data_location <- "https://docs.google.com/spreadsheets/d/1IlYzDoBuMwCw_AkRILwYB8gYLZWVDGLumYFMmrl7tOk/edit#gid=698569653"
 
 component_data <- read_sheet(
   ss = component_data_location,
   sheet = "component_combinations")
 
-## SELECT RELEVANT COMPONENTS
-
-clean_data <- component_data %>%
+# select relevant components
+clean_component_data <- component_data %>%
   select(
     study_reference,
-    intervention_basic_skills,                 
+    intervention_basic_skills,
     intervention_life_skills,
-    intervention_off_job_training,                
+    intervention_off_job_training,
     intervention_on_the_job_training,
-    intervention_apprenticeships,                 
+    intervention_apprenticeships,
     intervention_coaching_mentoring,
     intervention_other,
-    comparison_services_as_usual_only,            
-    comparison_basic_skills,                       
-    comparison_life_skills,                       
-    comparison_off_job_training,                   
-    comparison_on_the_job_training,               
-    comparison_apprenticeships,                    
-    comparison_coaching_mentoring,                
+    comparison_services_as_usual_only,
+    comparison_basic_skills,
+    comparison_life_skills,
+    comparison_off_job_training,
+    comparison_on_the_job_training,
+    comparison_apprenticeships,
+    comparison_coaching_mentoring,
     comparison_other
   ) %>%
   rename(
@@ -41,9 +39,10 @@ clean_data <- component_data %>%
   pivot_longer(
     cols = (-study),
     values_drop_na = TRUE) %>%
-  mutate(group = case_when(
-    str_detect(name, "intervention_") ~ "Intervention",
-    str_detect(name, "comparison_") ~ "Comparison")) %>%
+  mutate(
+    group = case_when(
+      str_detect(name, "intervention_") ~ "Intervention",
+      str_detect(name, "comparison_") ~ "Comparison")) %>%
   group_by(group, name) %>%
   tally() %>%
   mutate(
@@ -60,15 +59,17 @@ clean_data <- component_data %>%
       name == "apprenticeships" ~ "Apprenticeships",
       name == "coaching_mentoring" ~ "Coaching & Mentoring",
       name == "other" ~ "Other",
-      name == "services_as_usual" ~ "Services as Usual")) %>%
-  mutate(component_type = case_when(
-    name == "other" ~  "Other component",
-    name == "services_as_usual" ~  "Comparison",
-    TRUE ~ "Component of interest"))
+      name == "services_as_usual" ~ "Services as Usual")
+    ) %>%
+  mutate(
+    component_type = case_when(
+      name == "other" ~  "Other component",
+      name == "services_as_usual" ~  "Comparison",
+      TRUE ~ "Component of interest")
+    )
 
-## PLOT FIGURE
-
-specification_three_plot <- clean_data %>%
+#plot figure
+intervention_component_plot <- clean_component_data %>%
   ggplot() +
   aes(
     x = component,
@@ -89,20 +90,19 @@ specification_three_plot <- clean_data %>%
     y = c(0,60)
   ) +
   labs(
-    y = "Frequency component/comparison type appears in specification sample",
+    y = "Frequency component/comparison type\nappears in included studies",
     x = "Component/comparison type"
   ) +
-  scale_x_discrete(labels = wrap_format(11)) +
+  scale_x_discrete(labels = scales::wrap_format(11)) +
   scale_fill_manual(
     values = c(
-      "Comparison" = "#69C2C9",
-      "Component of interest" = "#BFB800",
-      "Other component" = "#7D2248"
+      "Comparison" = "#5A5A5A",
+      "Component of interest" = "#006DAE",
+      "Other component" = "#969696"
     )
   ) +
   theme(
-    plot.background = element_rect(
-      colour = "#FFFFFF"),
+    plot.background = element_rect(colour = "#FFFFFF"),
     legend.position = "none",
     legend.title = element_blank(),
     strip.background = element_blank(),
@@ -110,23 +110,18 @@ specification_three_plot <- clean_data %>%
     panel.grid.minor = element_blank(),
     axis.ticks = element_blank(),
     axis.line.x = element_blank(),
-    #axis.text.x = element_text(
-    #  angle = 45,
-    #  vjust = 1,
-    #  hjust = 1
-    #),
     strip.text = element_text(
       face = "bold",
       hjust = 0,
       size = 11
     )
-  ) 
+  )
 
-## EXPORT PLOT
-
+# export plot
 ggsave(
-  file = "./visualisation/output/nma_component_breakdown.png",
-  plot = specification_three_plot, 
-  width = 10, 
-  height = 6, 
-  type = "cairo-png")
+  file = "./network-meta/visualisation/output/nma_component_breakdown.png",
+  plot = intervention_component_plot,
+  width = 10,
+  height = 4,
+  type = "cairo-png"
+  )
