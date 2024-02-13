@@ -61,7 +61,7 @@ component_combination_labels <- c(
   )
 
 png(
-  file = "./network-meta/visualisation/output/nma_employment_standard_nma.png",
+  file = "./network-meta/visualisation/output/nma_employment_standard.png",
   width = 29,
   height = 12,
   units = "cm",
@@ -70,12 +70,12 @@ png(
   ) 
 
 forest(employment_network_meta_random_effects,
-   studlab = component_combination_labels,     
+   studlab = component_combination_labels,
    reference.group = "SAU",
    col.by = "black",
    xlim = c(-1, 1.5),
    addrow.subgroups = FALSE,
-   fontsize = 10, 
+   fontsize = 10,
    spacing = 0.7,
    leftcols = c("studlab", "prop.direct"),
    equal.size = FALSE,
@@ -121,9 +121,9 @@ network_labels <- c(
 netgraph(
   employment_network_meta_random_effects,
   plastic = FALSE,
-  col = "#7D2248",
+  col ="#006DAE",
   number.of.studies = TRUE,
-  cex.number = 1,
+  cex.number = 1.5,
   pos.number.of.studies = 0.7,
   labels = network_labels
   )
@@ -190,7 +190,8 @@ funnel(
   pch = c(8:24), 
   col = c(8:24),
   text.linreg = "(Egger)",
-  method.bias = c("Egger"), digits.pval = 2)
+  method.bias = c("Egger"), digits.pval = 2
+  )
 
 dev.off()
 
@@ -284,7 +285,7 @@ forest(
   fontsize = 10, 
   spacing = 0.7, 
   squaresize = 0.9,
-  smlab = paste("Program Components vs. Usual Services \n",                   "(Employment status)"),
+  smlab = paste("Program Components vs. Usual Services: \n",                   "Employment status"),
   label.left = "Favours Usual Services",
   label.right = "Favours Intervention",
   drop.reference.group = TRUE,
@@ -344,7 +345,7 @@ forest(
   fontsize = 10, 
   spacing = 0.7, 
   squaresize = 0.9,
-  smlab = paste("Program Components vs. Usual Services \n",                   "(Employment status)"),
+  smlab = paste("Program Components vs. Usual Services: \n",                   "Employment status"),
   label.left = "Favours Usual Services",
   label.right = "Favours Intervention",
   leftlabs = "Intervention component",
@@ -401,7 +402,7 @@ forest(
   fontsize = 10, 
   spacing = 0.7, 
   squaresize = 0.9,
-  smlab = paste("Program Components vs. Usual Services \n",                   "(Employment status)"),
+  smlab = paste("Program Components vs. Usual Services: \n",                   "Employment status"),
   label.left = "Favours Usual Services",
   label.right = "Favours Intervention",
   leftlabs = "Intervention component",
@@ -458,7 +459,7 @@ forest(
   fontsize = 10, 
   spacing = 0.7, 
   squaresize = 0.9,
-  smlab = paste("Program Components vs. Usual Services \n",                   "(Employment status)"),
+  smlab = paste("Program Components vs. Usual Services: \n",                   "Employment status"),
   label.left = "Favours Usual Services",
   label.right = "Favours Intervention",
   leftlabs = "Intervention component",
@@ -515,7 +516,7 @@ forest(
   fontsize = 10, 
   spacing = 0.7, 
   squaresize = 0.9,
-  smlab = paste("Program Components vs. Usual Services \n",                   "(Employment status)"),
+  smlab = paste("Program Components vs. Usual Services: \n",                   "Employment status"),
   label.left = "Favours Usual Services",
   label.right = "Favours Intervention",
   leftlabs = "Intervention component",
@@ -572,7 +573,7 @@ forest(
   fontsize = 10, 
   spacing = 0.7, 
   squaresize = 0.9,
-  smlab = paste("Program Components vs. Usual Services \n",                   "(Employment status)"),
+  smlab = paste("Program Components vs. Usual Services: \n",                   "Employment status"),
   label.left = "Favours Usual Services",
   label.right = "Favours Intervention",
   leftlabs = "Intervention component",
@@ -582,26 +583,49 @@ forest(
 dev.off()
 
 # Compare results between different NMA specifications
+
+# prep colour palette
+colour_palette <- viridis_pal(
+    begin = 0, 
+    end = 0.8,
+    direction = 1,
+    option = "inferno"
+  )(7)
+
 png(
   file = "./network-meta/visualisation/output/nma_employment_results_comparison.png",
-  width = 16,
-  height = 31,
+  width = 18,
+  height = 58,
   units = "cm",
-  res = 1200,
+  res = 800,
   type = "cairo-png"
   ) 
 
+# prepare plot data
 employment_forest_plot_data <- netbind(
-  random = TRUE,
-  common = FALSE,
+  random = TRUE, 
+  common = FALSE, 
   employment_network_meta_random_effects, 
   employment_additive_component_network_meta, 
-  employment_interaction_component_network_meta_bs_ofjt, 
-  name = c("Standard NMA", "Additive cNMA", "BS+OFF-JT Interaction cNMA"),
-  col.study = c("#7D2248", "#BFB800", "#69C2C9"),
-  col.square = c("#7D2248", "#BFB800", "#69C2C9")
+  employment_interaction_component_network_meta_bs_ofjt,
+  employment_interaction_component_network_meta_ojt_oth,
+  employment_interaction_component_network_meta_bs_oth,
+  employment_interaction_component_network_meta_ls_oth,
+  employment_interaction_component_network_meta_cm_oth,
+  name = c(
+    "Standard NMA", 
+    "Additive cNMA", 
+    "Basic Skills x Off-the-job training Interaction cNMA",
+    "On-the-job training x Other Interaction cNMA",
+    "Basic Skills x Other Interaction cNMA",
+    "Life Skills x Other Interaction cNMA",
+    "Coaching & Mentoring x Other Interaction cNMA"
+    ), 
+  col.study = colour_palette,
+  col.square = colour_palette
   )
 
+# plot different nma specifications
 forest(employment_forest_plot_data,
   reference.group = "SAU",
   col.by = "black",
@@ -610,7 +634,7 @@ forest(employment_forest_plot_data,
   fontsize = 10, 
   spacing = 0.7, 
   squaresize = 0.9,
-  smlab = paste("Employment Program Components vs. Usual Services \n",                   "(Employment status)"),
+  smlab = paste("Employment Program Components vs. Usual Services: \n",                   "Employment status"),
   label.left = "Favours Usual Services",
   label.right = "Favours Intervention",
   leftlabs = "Intervention component",

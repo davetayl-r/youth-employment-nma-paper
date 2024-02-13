@@ -54,7 +54,7 @@ component_combination_labels <- c(
   "Other")
 
 png(
-  file = "./network-meta/visualisation/output/nma_education_standard_nma.png",
+  file = "./network-meta/visualisation/output/nma_education_standard.png",
   width = 29,
   height = 10,
   units = "cm",
@@ -111,7 +111,7 @@ netgraph(
   plastic = FALSE,
   col ="#006DAE",
   number.of.studies = TRUE,
-  cex.number = 1,
+  cex.number = 1.5,
   pos.number.of.studies = 0.7,
   labels = network_labels
   )
