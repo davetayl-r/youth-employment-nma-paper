@@ -1,0 +1,38 @@
+/* css styles */
+
+/* set table font size */
+table {
+    font-size: 11pt;
+}
+
+/* left-align figure captions */
+figcaption {
+    text-align: left;
+}
+
+/* left-align table captions */
+caption {
+    text-align: left;
+}
+
+/* insert scrolling box when objects overflow */
+.horizontal-scrolling {
+    overflow: auto;
+    white-space: nowrap;
+  }
+  
+/* ensure figure is aligned */
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+  }
+ 
+/* footnote */  
+.custom-footnote {
+    font-size: 10pt;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}  
