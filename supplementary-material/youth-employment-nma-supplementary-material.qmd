@@ -1,6 +1,6 @@
 ---
 title: "A network meta-analysis of employment and skills interventions designed to assist young people to enter the labour market in high income countries: supplementary material"
-date: 28 February 2024
+date: "22 February 2024"
 author: 
   - name: David Taylor
     affiliation: Monash University
@@ -21,8 +21,8 @@ author:
     affiliation: Monash University
     orcid: 0000-0001-8096-726X
 citation:
-  doi: "TBD"
-  url: https://davetayl-r.github.io/youth-employment-nma/
+  doi: "10.5281/zenodo.10690829"
+  url: https://davetayl-r.github.io/youth-employment-nma-paper/youth-employment-nma-supplementary-material.html
 bibliography: youth-employment-nma-references.bib
 csl: apa-sixth-edition.csl
 link-citations: true

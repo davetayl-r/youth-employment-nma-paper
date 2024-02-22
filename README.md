@@ -1,6 +1,6 @@
 # Supplementary material for a rapid review and network meta-analysis of employment and skills interventions designed to assist young people to enter the labour market in high income countries
 
-DOI
+[![](https://zenodo.org/badge/DOI/10.5281/zenodo.10690829.svg)](https://doi.org/10.5281/zenodo.10690829)
 
 This repository [hosts a site](https://davetayl-r.github.io/youth-employment-nma-paper/youth-employment-nma-supplementary-material.html) that contains supplementary material, data and analysis code for a network meta-analysis titled "A rapid review and network meta-analysis of employment and skills interventions designed to assist young people to enter the labour market in high income countries".
 
