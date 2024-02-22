@@ -70,9 +70,16 @@ This page contains supplementary material for a network meta-analysis titled <i>
 The following information is provided here:
 
 -   <b>Identification and selection of relevant studies</b> --- this section contains additional information on our search strategy
--   <b>Extraction and transformation of information from relevant studies</b> --- this section contains information on a) what we extracted from included studies, b) how we selected outcomes where multiple options existed and c) a log of decisions we made in the transformation of reported resutls into a common effect size
--   <b>Supplementary information about included and excluded studies</b> --- this section contains information on a) how we distinguished between multiple reports of the same study, b) studies we rejected at full-text review and c) details of studies that reported outcomes they we were not able to to quantitatively synthesise in a network meta-analysis.
+-   <b>Extraction and transformation of information from relevant studies</b> --- this section contains information on: 
+      a) what we extracted from included studies, 
+      b) how we selected outcomes where multiple options existed, and 
+      c) a log of decisions we made in the transformation of reported resutls into a common effect size
+-   <b>Supplementary information about included and excluded studies</b> --- this section contains information on: 
+      a) how we distinguished between multiple reports of the same study, 
+      b) studies we rejected at full-text review, and 
+      c) details of studies that reported outcomes they we were not able to to quantitatively synthesise in a network meta-analysis.
 -   <b>Analysis of relevant studies</b> --- this section contains the full results of the quantitative synthesis that we undertook, including interaction models, subgroup analysis, sensitivity analysis, publication bias assessments and incoherence assessments.
+-   <b>PRISMA 2020 Checklist</b> --- includes details of how this review meets the PRISMA 2020 reporting guidelines.  
 
 The analysis code is available in a [GitHub repository](https://github.com/davetayl-r/youth-employment-nma-paper).
 
@@ -457,6 +464,8 @@ Of the fifty-eight (n=58) included studies, five (n=5) were not included in a ne
 +-----------------------------------------------------------------+------------------------------------------------+------------------------------------------------------------------+
 
 : Selection of studies rejected at full-text review {#tbl-ye-nma-full-text-reject} {tbl-colwidths="\[30,40,30\]"}
+
+## Details of results that we were unable to convert to an effect size
 
 +--------------------------------------+-------------------------------------------------------------------------------+--------------------------------------------------------------------+------------------------------------------------------------------+-----------------------+
 | Primary reference                    | Intervention name                                                             | Outcome                                                            | Effect size reported or can be transformed from reported results | Reason                |
@@ -2893,6 +2902,52 @@ Of the twenty-three (n=23) included studies reporting education completion outco
 ### Sensitivity analysis
 
 Of the twenty-three (n=23) studies reporting education completion outcomes, all but three (n=20) use randomised designs. This meant that it was not possible to undertake sensitivity analysis by study design for this outcome.
+
+# PRISMA 2020 Checklist
+
+The PRISMA 2020 checklist is included in @tbl-nma-prisma-checklist.
+
+```{r}
+#| echo: false
+#| tbl-cap: PRISMA 2020 Checklist Updated
+#| name: nma-supplementary-material-prisma-2020
+#| label: tbl-nma-prisma-checklist
+ 
+# read data
+prisma_file_location <- "./inputs/prisma.xlsx"
+prisma_table <- readxl::read_excel(
+  prisma_file_location,
+  sheet = "prisma")
+
+# produce table
+prisma_table %>%
+  filter(
+    !`Section and Topic` == "TITLE", 
+    !`Section and Topic` == "ABSTRACT",
+    !`Section and Topic` == "INTRODUCTION",
+    !`Section and Topic` == "METHODS",
+    !`Section and Topic` == "RESULTS",
+    !`Section and Topic` == "DISCUSSION",
+    !`Section and Topic` == "OTHER INFORMATION") %>%
+  kbl(
+    ) %>%
+  kable_styling(
+    bootstrap_options = c(
+      "hover", 
+      "condensed"),
+    font_size = 12
+    ) %>%
+  pack_rows(
+    index = c(
+      "Title" = 1, 
+      "Abstract" = 1, 
+      "Introduction" = 2,
+      "Methods" = 17,
+      "Results" = 11,
+      "Discussion" = 3,
+      "Other Information" = 6)
+    ) 
+```
 
 <h1>References</h1>
 

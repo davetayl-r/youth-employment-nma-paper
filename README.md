@@ -1,8 +1,8 @@
-# Supplementary material for a network meta-analysis of employment and skills interventions designed to assist young people to enter the labour market in high income countries
+# Supplementary material for a rapid review and network meta-analysis of employment and skills interventions designed to assist young people to enter the labour market in high income countries
 
 DOI
 
-This repository [hosts a site](https://davetayl-r.github.io/youth-employment-nma-paper/youth-employment-nma-supplementary-material.html) that contains supplementary material, data and analysis code for a network meta-analysis titled "A network meta-analysis of employment and skills interventions designed to assist young people to enter the labour market in high income countries".
+This repository [hosts a site](https://davetayl-r.github.io/youth-employment-nma-paper/youth-employment-nma-supplementary-material.html) that contains supplementary material, data and analysis code for a network meta-analysis titled "A rapid review and network meta-analysis of employment and skills interventions designed to assist young people to enter the labour market in high income countries".
 
 The following information is available as part of the supplementary material:
 
@@ -22,4 +22,3 @@ The following information is available in the repository:
 
 * the folder `network-meta` contains all of the code required to transform effect sizes (`es-transformation`), undertake the network meta-analysis (`nma`) and produce visualisations (`visualisations`) used in the publication
 * the folder `supplementary-material` contains all of the code and input required to reproduce the supplementary materials
-
