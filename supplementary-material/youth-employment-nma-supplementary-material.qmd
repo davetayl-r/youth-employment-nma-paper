@@ -1,5 +1,5 @@
 ---
-title: "A network meta-analysis of employment and skills interventions designed to assist young people to enter the labour market in high income countries: supplementary material"
+title: "A component network meta-analysis of employment and skills interventions designed to assist young people to enter the labour market in high income countries: supplementary material"
 date: "22 February 2024"
 author: 
   - name: David Taylor
