@@ -648,16 +648,16 @@ education_component_es_data <- readRDS(education_component_es_data_location)
 
 ## Employment status
 
-### Fit standard NMA
+### Fit standard CNMA
 
 ```{r}
 #| echo: false
 #| message: false
-#| name: nma-employment-status-standard-nma
-#| fig-cap: Forest plot depicting results of a standard NMA for employment status
+#| name: nma-employment-status-standard-cnma
+#| fig-cap: Forest plot depicting results of a standard CNMA for employment status
 #| fig-width: 10
 #| fig-height: 4
-#| label: fig-nma-employment-status-standard-nma
+#| label: fig-nma-employment-status-standard-cnma
 #| cache: true
 
 # specify nma
@@ -1326,7 +1326,7 @@ forest(
 #| echo: false
 #| message: false
 #| name: nma-employment-status-nma-comparison
-#| fig-cap: Forest plot depicting results of Interaction, Additive and standard NMA of component combinations on employment status
+#| fig-cap: Forest plot depicting results of Interaction, Additive and standard CNMA of component combinations on employment status
 #| fig-height: 23
 #| label: fig-nma-employment-status-nma-comparison
 #| cache: true
@@ -1352,13 +1352,13 @@ employment_forest_plot_data <- netbind(
   employment_interaction_component_network_meta_ls_oth,
   employment_interaction_component_network_meta_cm_oth,
   name = c(
-    "Standard NMA", 
-    "Additive cNMA", 
-    "Basic Skills x Off-the-job training Interaction cNMA",
-    "On-the-job training x Other Interaction cNMA",
-    "Basic Skills x Other Interaction cNMA",
-    "Life Skills x Other Interaction cNMA",
-    "Coaching & Mentoring x Other Interaction cNMA"
+    "Standard CNMA", 
+    "Additive CNMA", 
+    "Basic Skills x Off-the-job training Interaction CNMA",
+    "On-the-job training x Other Interaction CNMA",
+    "Basic Skills x Other Interaction CNMA",
+    "Life Skills x Other Interaction CNMA",
+    "Coaching & Mentoring x Other Interaction CNMA"
     ), 
   col.study = colour_palette, 
   col.square = colour_palette
@@ -1535,7 +1535,7 @@ employment_network_meta_random_effects_low_med_confidence_data <- employment_com
     relevant_studies == "Low or Medium confidence"
   )
 
-# specify standard NMA for each subgroup
+# specify standard CNMA for each subgroup
 employment_network_meta_random_effects_subgroup_high_confidence <- netmeta( 
   TE = es, 
   seTE = se, 
@@ -1668,7 +1668,7 @@ employment_network_meta_random_effects_location_usa_data <- employment_component
 employment_network_meta_random_effects_location_other_data <- employment_component_es_data %>% 
   filter(!study_location == "United States")
 
-# specify standard NMA for each subgroup
+# specify standard CNMA for each subgroup
 employment_network_meta_random_effects_subgroup_location_usa <- netmeta( 
   TE = es, 
   seTE = se, 
@@ -1799,7 +1799,7 @@ employment_network_meta_random_effects_population_complex_needs_data <- employme
 employment_network_meta_random_effects_population_without_complex_needs_data <- employment_component_es_data %>%
   filter(complex_population == "No")
 
-# specify standard NMA for each subgroup
+# specify standard CNMA for each subgroup
 employment_network_meta_random_effects_population_without_complex_needs <- netmeta(
   TE = es, 
   seTE = se, 
@@ -1927,7 +1927,7 @@ employment_network_meta_random_effects_randomised_data <- employment_component_e
 employment_network_meta_random_effects_non_randomised_data <- employment_component_es_data %>% 
   filter(study_design == "Non-randomised")
 
-# specify standard NMA for each subgroup
+# specify standard CNMA for each subgroup
 employment_network_meta_random_effects_subgroup_randomised <- netmeta(
   TE = es, 
   seTE = se, 
@@ -2036,16 +2036,16 @@ forest(
 
 ## Education completion
 
-### Fit standard NMA
+### Fit standard CNMA
 
 ```{r}
 #| echo: false
 #| message: false
-#| name: nma-education-completion-standard-nma
-#| fig-cap: Forest plot depicting results of a standard NMA for education completion
+#| name: nma-education-completion-standard-cnma
+#| fig-cap: Forest plot depicting results of a standard CNMA for education completion
 #| fig-width: 10
 #| fig-height: 4
-#| label: fig-nma-education-completion-standard-nma
+#| label: fig-nma-education-completion-standard-cnma
 #| cache: true
 
 # specify nma
@@ -2656,7 +2656,7 @@ forest(
 #| echo: false
 #| message: false
 #| name: nma-education-completion-nma-comparison
-#| fig-cap: Forest plot depicting results of Interaction, Additive and standard NMA of component combinations on education completion
+#| fig-cap: Forest plot depicting results of Interaction, Additive and standard CNMA of component combinations on education completion
 #| fig-height: 23
 #| label: fig-nma-education-completion-nma-comparison
 #| cache: true
@@ -2681,12 +2681,12 @@ education_forest_plot_data <- netbind(
   education_interaction_component_network_meta_ls_oth,
   education_interaction_component_network_meta_cm_oth,
   name = c(
-    "Standard NMA", 
-    "Additive cNMA", 
-    "On-the-job training x Other Interaction cNMA",
-    "Basic Skills x Other Interaction cNMA",
-    "Life Skills x Other Interaction cNMA",
-    "Coaching & Mentoring x Other Interaction cNMA"
+    "Standard CNMA", 
+    "Additive CNMA", 
+    "On-the-job training x Other Interaction CNMA",
+    "Basic Skills x Other Interaction CNMA",
+    "Life Skills x Other Interaction CNMA",
+    "Coaching & Mentoring x Other Interaction CNMA"
     ), 
   col.study = colour_palette, 
   col.square = colour_palette
@@ -2796,7 +2796,7 @@ education_network_meta_random_effects_population_complex_needs_data <- education
 education_network_meta_random_effects_population_without_complex_needs_data <- education_component_es_data %>%
   filter(complex_population == "No")
 
-# specify standard NMA for each subgroup
+# specify standard CNMA for each subgroup
 education_network_meta_random_effects_population_without_complex_needs <- netmeta(
   TE = es, 
   seTE = se, 
