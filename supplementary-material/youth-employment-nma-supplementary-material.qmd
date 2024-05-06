@@ -1,6 +1,6 @@
 ---
-title: "A component network meta-analysis of employment and skills interventions designed to assist young people to enter the labour market in high income countries: supplementary material"
-date: "22 February 2024"
+title: "Employment and skills interventions designed to assist young people to enter the labour market in high income countries: A component network meta-analysis — supplementary material"
+date: "6 May 2024"
 author: 
   - name: David Taylor
     affiliation: Monash University
@@ -16,7 +16,7 @@ author:
     orcid:
   - name: Emily Tanner-Smith
     affiliation: University of Oregon
-    orcid:    
+    orcid: 0000-0002-5313-0664    
   - name: Aron Shlonsky
     affiliation: Monash University
     orcid: 0000-0001-8096-726X
@@ -52,12 +52,12 @@ library(stringr)
 library(readxl)
 library(meta)
 library(netmeta)
-library(dmetar)
 library(ggplot2)
 library(viridis)
 library(scales)
 library(viscomp)
 library(kableExtra)
+#library(magick)
 
 # set knitr defaults
 knitr::knit_hooks$set(crop = knitr::hook_pdfcrop)
@@ -65,21 +65,21 @@ knitr::knit_hooks$set(crop = knitr::hook_pdfcrop)
 
 # About
 
-This page contains supplementary material for a network meta-analysis titled <i>"A network meta-analysis of employment and skills interventions designed to assist young people to enter the labour market in high income countries"</i>.
+This page contains supplementary material for a network meta-analysis titled <i>"Employment and skills interventions designed to assist young people to enter the labour market in high income countries: A component network meta-analysis"</i>.
 
 The following information is provided here:
 
 -   <b>Identification and selection of relevant studies</b> --- this section contains additional information on our search strategy
--   <b>Extraction and transformation of information from relevant studies</b> --- this section contains information on: 
-      a) what we extracted from included studies, 
-      b) how we selected outcomes where multiple options existed, and 
-      c) a log of decisions we made in the transformation of reported resutls into a common effect size
--   <b>Supplementary information about included and excluded studies</b> --- this section contains information on: 
-      a) how we distinguished between multiple reports of the same study, 
-      b) studies we rejected at full-text review, and 
-      c) details of studies that reported outcomes they we were not able to to quantitatively synthesise in a network meta-analysis.
+-   <b>Extraction and transformation of information from relevant studies</b> --- this section contains information on:
+    a)  what we extracted from included studies,
+    b)  how we selected outcomes where multiple options existed, and
+    c)  a log of decisions we made in the transformation of reported resutls into a common effect size
+-   <b>Supplementary information about included and excluded studies</b> --- this section contains information on:
+    a)  how we distinguished between multiple reports of the same study,
+    b)  studies we rejected at full-text review, and
+    c)  details of studies that reported outcomes they we were not able to to quantitatively synthesise in a network meta-analysis.
 -   <b>Analysis of relevant studies</b> --- this section contains the full results of the quantitative synthesis that we undertook, including interaction models, subgroup analysis, sensitivity analysis, publication bias assessments and incoherence assessments.
--   <b>PRISMA 2020 Checklist</b> --- includes details of how this review meets the PRISMA 2020 reporting guidelines.  
+-   <b>PRISMA 2020 Checklist</b> --- includes details of how this review meets the PRISMA 2020 reporting guidelines.
 
 The analysis code is available in a [GitHub repository](https://github.com/davetayl-r/youth-employment-nma-paper).
 
@@ -89,7 +89,7 @@ The analysis code is available in a [GitHub repository](https://github.com/davet
 
 All impact evaluations classified as either 'low', 'medium' or 'high-quality' included in the @apunyo2022interventionsincreaseyouth EGM were screened for relevance if they appeared in any of the following intervention categories (as defined by the EGM):
 
--   Life skills
+-   Life Skills Training
 
 -   Internship and apprenticeships
 
@@ -146,13 +146,13 @@ These categories were further filtered using the following outcome categories:
 |                  |                                                                                                      |                                                                                                                                                              |
 |                  | -   Apprenticeships,                                                                                 |                                                                                                                                                              |
 |                  |                                                                                                      |                                                                                                                                                              |
-|                  | -   Basic Skills,                                                                                    |                                                                                                                                                              |
+|                  | -   Basic Skills Training,                                                                           |                                                                                                                                                              |
 |                  |                                                                                                      |                                                                                                                                                              |
-|                  | -   Life Skills,                                                                                     |                                                                                                                                                              |
+|                  | -   Life Skills Training,                                                                            |                                                                                                                                                              |
 |                  |                                                                                                      |                                                                                                                                                              |
-|                  | -   On-the-job training,                                                                             |                                                                                                                                                              |
+|                  | -   On-the-Job Training,                                                                             |                                                                                                                                                              |
 |                  |                                                                                                      |                                                                                                                                                              |
-|                  | -   Off-the-job training, or                                                                         |                                                                                                                                                              |
+|                  | -   Off-the-Job Training, or                                                                         |                                                                                                                                                              |
 |                  |                                                                                                      |                                                                                                                                                              |
 |                  | -   Coaching and Mentoring                                                                           |                                                                                                                                                              |
 +------------------+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -655,7 +655,7 @@ education_component_es_data <- readRDS(education_component_es_data_location)
 #| message: false
 #| name: nma-employment-status-standard-cnma
 #| fig-cap: Forest plot depicting results of a standard CNMA for employment status
-#| fig-width: 10
+#| fig-width: 12
 #| fig-height: 4
 #| label: fig-nma-employment-status-standard-cnma
 #| cache: true
@@ -676,29 +676,29 @@ employment_network_meta_random_effects <- netmeta(
 
 # define labels
 component_combination_labels <- c(
-  "On-the-job Training + Other",
-  "Basic Skills + Off-the-job Training + Other",
-  "On-the-job Training",
+  "On-the-Job Training + Other",
+  "Basic Skills Training + Off-the-Job Training + Other",
+  "On-the-Job Training",
   "Apprenticeships",
-  "Life Skills + Coaching & Mentoring + Other",
-  "Off-the-job Training",
-  "Basic Skills + Life Skills + Off-the-job Training + Other",
-  "Life Skills + Off-the-job Training + Other",
-  "Basic Skills + Life Skills + Coaching & Mentoring + Other",
-  "Basic Skills",
-  "Off-the-job Training + On-the-job Training + Other",
-  "Coaching & Mentoring + Other",
-  "Basic Skills + Life Skills + Other",
+  "Life Skills Training + Coaching and Mentoring + Other",
+  "Off-the-Job Training",
+  "Basic Skills Training + Life Skills Training + Off-the-Job Training + Other",
+  "Life Skills Training + Off-the-Job Training + Other",
+  "Basic Skills Training + Life Skills Training + Coaching and Mentoring + Other",
+  "Basic Skills Training",
+  "Off-the-Job Training + On-the-Job Training + Other",
+  "Coaching and Mentoring + Other",
+  "Basic Skills Training + Life Skills Training + Other",
   "Other",
-  "Basic Skills + Coaching & Mentoring + Other",
-  "Basic Skills + Life Skills + Off-the-job Training + Coaching & Mentoring + Other",
-  "Life Skills + Other",
-  "Basic Skills + Off-the-job Training",
-  "Basic Skills + Other"
+  "Basic Skills Training + Coaching and Mentoring + Other",
+  "Basic Skills Training + Life Skills Training + Off-the-Job Training + Coaching and Mentoring + Other",
+  "Life Skills Training + Other",
+  "Basic Skills Training + Off-the-Job Training",
+  "Basic Skills Training + Other"
   )
 
 # plot results
-forest(employment_network_meta_random_effects,
+meta::forest(employment_network_meta_random_effects,
    studlab = component_combination_labels,     
    reference.group = "SAU",
    col.by = "black",
@@ -732,23 +732,23 @@ set.seed(268)
 
 network_labels <- c(
   "Apprenticeships",                  
-  "Basic Skills",                   
-  "Basic Skills + Coaching & Mentoring + Other",           
-  "Basic Skills + Life Skills + Coaching & Mentoring + Other",        
-  "Basic Skills + Life Skills + Off-the-job Training + Coaching & Mentoring + Other", 
-  "Basic Skills + Life Skills + Off-the-job Training + Other",    
-  "Basic Skills + Life Skills + Other",            
-  "Basic Skills + Off-the-job Training",            
-  "Basic Skills + Off-the-job Training + Other",        
-  "Basic Skills + Other",               
-  "Coaching & Mentoring + Other",              
-  "Life Skills + Coaching & Mentoring + Other",          
-  "Life Skills + Off-the-job Training + Other",        
-  "Life Skills + Other",               
-  "Off-the-job Training",               
-  "Off-the-job Training + On-the-job Training + Other",     
-  "On-the-job Training",                
-  "On-the-job Training + Other",           
+  "Basic Skills Training",                   
+  "Basic Skills Training + Coaching and Mentoring + Other",           
+  "Basic Skills Training + Life Skills Training + Coaching and Mentoring + Other",        
+  "Basic Skills Training + Life Skills Training + Off-the-Job Training + Coaching and Mentoring + Other", 
+  "Basic Skills Training + Life Skills Training + Off-the-Job Training + Other",    
+  "Basic Skills Training + Life Skills Training + Other",            
+  "Basic Skills Training + Off-the-Job Training",            
+  "Basic Skills Training + Off-the-Job Training + Other",        
+  "Basic Skills Training + Other",               
+  "Coaching and Mentoring + Other",              
+  "Life Skills Training + Coaching and Mentoring + Other",          
+  "Life Skills Training + Off-the-Job Training + Other",        
+  "Life Skills Training + Other",               
+  "Off-the-Job Training",               
+  "Off-the-Job Training + On-the-Job Training + Other",     
+  "On-the-Job Training",                
+  "On-the-Job Training + Other",           
   "Other",                  
   "Services as usual")
 
@@ -796,7 +796,7 @@ employment_nma_component_visualisation$heatmat +
 
 ::: custom-footnote
 **Plot Legend:**\
-*BS:* Basic Skills, *LS:* Life Skills, *OFF-JT:* Off-the-job training, *ON-JT:* On-the-job-training, *APP:* Apprenticeships, *C&M:* Coaching and mentoring, *OTH:* Other (residual) component.
+*BS:* Basic Skills Training, *LS:* Life Skills Training, *OFF-JT:* Off-the-Job Training, *ON-JT:* On-the-job-training, *APP:* Apprenticeships, *C&M:* Coaching and Mentoring, *OTH:* Other (residual) component.
 :::
 
 ### Summary results in league table
@@ -981,7 +981,7 @@ Combinations of components (listed in alphabetical order) from included studies 
 Direct evidence (i.e., sourced from pairwise comparisons) are shown in blue.\
 Indirect effects (i.e., from the NMA) are shown in gray.\
 **Legend:**\
-*BS:* Basic Skills, *LS:* Life Skills, *OFF-JT:* Off-the-job training, *ON-JT:* On-the-job-training, *APP:* Apprenticeships, *C&M:* Coaching and mentoring, *OTH:* Other (residual) component.
+*BS:* Basic Skills Training, *LS:* Life Skills Training, *OFF-JT:* Off-the-Job Training, *ON-JT:* On-the-job-training, *APP:* Apprenticeships, *C&M:* Coaching and Mentoring, *OTH:* Other (residual) component.
 :::
 
 ### Fit additive component NMA
@@ -991,6 +991,7 @@ Indirect effects (i.e., from the NMA) are shown in gray.\
 #| message: false
 #| name: nma-employment-status-additive
 #| fig-cap: Forest plot showing the results of an additive CNMA for employment status
+#| fig-width: 7
 #| fig-height: 2.5
 #| label: fig-nma-employment-status-additive
 #| cache: true
@@ -1008,11 +1009,11 @@ employment_additive_component_network_meta_plot_data <- netcomplex(
 
 component_labels <- c(
   "Apprenticeships", 
-  "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
-  "On-the-job Training", 
+  "Basic Skills Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
   "Other")
 
 forest(
@@ -1041,7 +1042,8 @@ forest(
 #| echo: false
 #| message: false
 #| name: nma-employment-status-interaction-bs-ofjt
-#| fig-cap: Forest plot depicting results of CNMA with interaction between Basic Skills x Off-the-job training for employment status
+#| fig-cap: Forest plot depicting results of CNMA with interaction between Basic Skills Training x Off-the-Job Training for employment status
+#| fig-width: 8
 #| fig-height: 2.5
 #| label: fig-nma-employment-status-interaction-bs-ofjt
 #| cache: true
@@ -1063,13 +1065,13 @@ employment_interaction_component_network_meta_bs_ofjt_plot_data <- netcomplex(
 
 component_labels <- c(
   "Apprenticeships", 
-  "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
-  "On-the-job Training", 
+  "Basic Skills Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
   "Other", 
-  "Basic Skills x Off-the-job Training"
+  "Basic Skills Training x Off-the-Job Training"
   )
 
 forest(
@@ -1096,7 +1098,8 @@ forest(
 #| echo: false
 #| message: false
 #| name: nma-employment-status-interaction-ojt-oth
-#| fig-cap: Forest plot depicting results of CNMA with interaction between On-the-job training x Other for employment status
+#| fig-cap: Forest plot depicting results of CNMA with interaction between On-the-Job Training x Other for employment status
+#| fig-width: 7
 #| fig-height: 2.5
 #| label: fig-nma-employment-status-interaction-ojt-oth
 #| cache: true
@@ -1120,13 +1123,13 @@ employment_interaction_component_network_meta_ojt_oth_plot_data <- netcomplex(
 
 component_labels <- c(
   "Apprenticeships", 
-  "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
-  "On-the-job Training", 
+  "Basic Skills Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
   "Other", 
-  "On-the-job Training x Other"
+  "On-the-Job Training x Other"
   )
 
 forest(
@@ -1153,7 +1156,8 @@ forest(
 #| echo: false
 #| message: false
 #| name: nma-employment-status-interaction-bs-oth
-#| fig-cap: Forest plot depicting results of CNMA with interaction between Basic Skills x Other for employment status
+#| fig-cap: Forest plot depicting results of CNMA with interaction between Basic Skills Training x Other for employment status
+#| fig-width: 7
 #| fig-height: 2.5
 #| label: fig-nma-employment-status-interaction-bs-oth
 #| cache: true
@@ -1177,13 +1181,13 @@ employment_interaction_component_network_meta_bs_oth_plot_data <- netcomplex(
 
 component_labels <- c(
   "Apprenticeships", 
-  "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
-  "On-the-job Training", 
+  "Basic Skills Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
   "Other", 
-  "Basic Skills x Other"
+  "Basic Skills Training x Other"
   )
 
 forest(
@@ -1210,7 +1214,8 @@ forest(
 #| echo: false
 #| message: false
 #| name: nma-employment-status-interaction-ls-oth
-#| fig-cap: Forest plot depicting results of CNMA with interaction between Life Skills x Other for employment status
+#| fig-cap: Forest plot depicting results of CNMA with interaction between Life Skills Training x Other for employment status
+#| fig-width: 7
 #| fig-height: 2.5
 #| label: fig-nma-employment-status-interaction-ls-oth
 #| cache: true
@@ -1234,13 +1239,13 @@ employment_interaction_component_network_meta_ls_oth_plot_data <- netcomplex(
 
 component_labels <- c(
   "Apprenticeships", 
-  "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
-  "On-the-job Training", 
+  "Basic Skills Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
   "Other", 
-  "Life Skills x Other"
+  "Life Skills Training x Other"
   )
 
 forest(
@@ -1267,7 +1272,8 @@ forest(
 #| echo: false
 #| message: false
 #| name: nma-employment-status-interaction_cm_oth
-#| fig-cap: Forest plot depicting results of CNMA with interaction between Coaching & Mentoring x Other for employment status
+#| fig-cap: Forest plot depicting results of CNMA with interaction between Coaching and Mentoring x Other for employment status
+#| fig-width: 7
 #| fig-height: 2.5
 #| label: fig-nma-employment-status-interaction_cm_oth
 #| cache: true
@@ -1291,13 +1297,13 @@ employment_interaction_component_network_meta_cm_oth_plot_data <- netcomplex(
 
 component_labels <- c(
   "Apprenticeships", 
-  "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
-  "On-the-job Training", 
+  "Basic Skills Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
   "Other", 
-  "Coaching & Mentoring x Other"
+  "Coaching and Mentoring x Other"
   )
 
 forest(
@@ -1327,7 +1333,8 @@ forest(
 #| message: false
 #| name: nma-employment-status-nma-comparison
 #| fig-cap: Forest plot depicting results of Interaction, Additive and standard CNMA of component combinations on employment status
-#| fig-height: 23
+#| fig-width: 8
+#| fig-height: 22
 #| label: fig-nma-employment-status-nma-comparison
 #| cache: true
 #| crop: true
@@ -1354,11 +1361,11 @@ employment_forest_plot_data <- netbind(
   name = c(
     "Standard CNMA", 
     "Additive CNMA", 
-    "Basic Skills x Off-the-job training Interaction CNMA",
-    "On-the-job training x Other Interaction CNMA",
-    "Basic Skills x Other Interaction CNMA",
-    "Life Skills x Other Interaction CNMA",
-    "Coaching & Mentoring x Other Interaction CNMA"
+    "Basic Skills Training x Off-the-Job Training Interaction CNMA",
+    "On-the-Job Training x Other Interaction CNMA",
+    "Basic Skills Training x Other Interaction CNMA",
+    "Life Skills Training x Other Interaction CNMA",
+    "Coaching and Mentoring x Other Interaction CNMA"
     ), 
   col.study = colour_palette, 
   col.square = colour_palette
@@ -1392,6 +1399,7 @@ forest(
 #| fig-cap: Comparison-adjusted funnel plot for employment status
 #| label: fig-nma-employment-status-pub-bias
 #| fig-height: 6
+#| fig-width: 8
 #| cache: true
 #| crop: true
 
@@ -1422,7 +1430,7 @@ funnel(
 
 ::: custom-footnote
 **Plot Legend:**\
-*APP:* Apprenticeships, *BS:* Basic Skills, *LS:* Life Skills, *OFF-JT:* Off-the-job training, *ON-JT:* On-the-job-training, *C&M:* Coaching and mentoring, *OTH:* Other (residual) component.
+*APP:* Apprenticeships, *BS:* Basic Skills Training, *LS:* Life Skills Training, *OFF-JT:* Off-the-Job Training, *ON-JT:* On-the-job-training, *C&M:* Coaching and Mentoring, *OTH:* Other (residual) component.
 :::
 
 ### Evaluate incoherence
@@ -1437,11 +1445,11 @@ Note that the number of studies for each combination of components using mixed e
 
 Application of the SIDE method identified a moderate amount of overall heterogeneity ($\tau$ = 0.180). Inconsistency between indirect and direct evidence was assessed using I^2^. Inconsistency appears to be present in three combinations, as indicated by an I^2^ value of 80 or more:
 
--   Life Skills + Coaching & Mentoring + Other versus Services as Usual (I^2^: 98%)
+-   Life Skills Training + Coaching and Mentoring + Other versus Services as Usual (I^2^: 98%)
 
--   Off-the-job Training versus Services as Usual (I^2^: 97%)
+-   Off-the-Job Training versus Services as Usual (I^2^: 97%)
 
--   Off-the-job Training + On-the-job Training + Other versus Services as Usual (I^2^: 88%)
+-   Off-the-Job Training + On-the-Job Training + Other versus Services as Usual (I^2^: 88%)
 
 In interpreting these results its important to note that I^2^ is a relative --- as opposed to absolute --- measure of heterogeneity @borenstein2017basicsmetaanalysisnot. Therefore taken together, these results suggest that of the moderate amount of heterogeneity that was identified, most it is true heterogeneity.
 
@@ -1451,7 +1459,7 @@ In interpreting these results its important to note that I^2^ is a relative --- 
 #| name: nma-employment-status-incoherence-side
 #| fig-cap: Forest plot visualising inconsistency within the network for employment status
 #| label: fig-nma-employment-status-incoherence-side
-#| fig-width: 9
+#| fig-width: 8
 #| fig-height: 12
 #| cache: true
 #| crop: true
@@ -1515,6 +1523,7 @@ Among studies that reported employment status outcomes, sixteen (n=16) were asse
 #| fig-subcap: 
 #|   - "Studies in which we have low or medium confidence"
 #|   - "Studies in which we have high confidence"
+#| fig-width: 5.5
 #| fig-height: 2
 #| label: fig-nma-employment-status-subgroup-study-confidence
 #| cache: true
@@ -1586,11 +1595,11 @@ employment_additive_component_network_meta_subgroup_low_med_confidence_plot_data
 # visualise results
 component_labels_low_med_confidence <- c(
   "Apprenticeships", 
-  "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
-  "On-the-job Training", 
+  "Basic Skills Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
   "Other"
   )
 
@@ -1614,10 +1623,10 @@ forest(
   )
 
 component_labels_high_confidence <- c(
-  "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
+  "Basic Skills Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
   "Other"
   )
 
@@ -1655,6 +1664,7 @@ The results --- presented in @fig-nma-employment-status-subgroup-study-location 
 #| fig-subcap: 
 #|   - "Studies conducted in the United States"
 #|   - "Studies conducted in other locations"
+#| fig-width: 5.5
 #| fig-height: 2
 #| label: fig-nma-employment-status-subgroup-study-location
 #| cache: true
@@ -1722,10 +1732,10 @@ employment_additive_component_network_meta_subgroup_location_other_plot_data <- 
 component_labels_usa <- c(
   "Apprenticeships", 
   "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
-  "On-the-job Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
   "Other"
   )
 
@@ -1749,11 +1759,11 @@ forest(
   )
 
 component_labels_row <- c(
-  "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
-  "On-the-job Training", 
+  "Basic Skills Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
   "Other")
 
 forest(
@@ -1786,6 +1796,7 @@ forest(
 #| fig-subcap: 
 #|   - "Studies involving young people\nwith reported additional barriers"
 #|   - "Studies involving young people\nwithout reported additional barriers"
+#| fig-width: 5.5
 #| fig-height: 2
 #| label: fig-nma-employment-status-subgroup-study-population
 #| cache: true
@@ -1845,11 +1856,11 @@ employment_additive_component_network_meta_population_without_complex_needs_plot
 
 # visualise results
 component_labels_barriers <- c(
-  "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
-  "On-the-job Training", 
+  "Basic Skills Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
   "Other"
   )
 
@@ -1874,10 +1885,10 @@ forest(
 component_labels_no_barriers <- c(
   "Apprenticeships",
   "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
-  "On-the-job Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
   "Other"
   )
 
@@ -1914,6 +1925,7 @@ The results of this analysis --- presented below in @fig-nma-employment-status-s
 #| fig-subcap: 
 #|   - "Randomised studies"
 #|   - "Non-randomised studies"
+#| fig-width: 5.5
 #| fig-height: 2
 #| label: fig-nma-employment-status-sensitivity-analysis
 #| cache: true
@@ -1977,11 +1989,11 @@ employment_additive_component_network_meta_subgroup_non_randomised_plot_data <- 
 
 # visualise results
 component_labels_randomised <- c(
-  "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
-  "On-the-job Training", 
+  "Basic Skills Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
   "Other"
   )
 
@@ -2007,10 +2019,10 @@ forest(
 component_labels_non_randomised <- c(
   "Apprenticeships", 
   "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
-  "On-the-job Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
   "Other"
   )
 
@@ -2064,18 +2076,18 @@ education_network_meta_random_effects <- netmeta(
 
 # define labels
 component_combination_labels <- c(
-  "On-the-job Training + Other",
-  "Life Skills + Off-the-job Training + Other",
-  "Basic Skills + Other",
-  "Basic Skills + Life Skills + Off-the-job Training + Other",
-  "Basic Skills + Life Skills + Other",
-  "Basic Skills + Life Skills + Coaching & Mentoring + Other",
-  "Basic Skills + Off-the-job Training + Other",
-  "Coaching & Mentoring + Other",
-  "Basic Skills + Coaching & Mentoring + Other",
-  "Off-the-job Training + On-the-job Training + Other",
-  "Life Skills + Other",
-  "Life Skills + Coaching & Mentoring + Other",
+  "On-the-Job Training + Other",
+  "Life Skills Training + Off-the-Job Training + Other",
+  "Basic Skills Training + Other",
+  "Basic Skills Training + Life Skills Training + Off-the-Job Training + Other",
+  "Basic Skills Training + Life Skills Training + Other",
+  "Basic Skills Training + Life Skills Training + Coaching and Mentoring + Other",
+  "Basic Skills Training + Off-the-Job Training + Other",
+  "Coaching and Mentoring + Other",
+  "Basic Skills Training + Coaching and Mentoring + Other",
+  "Off-the-Job Training + On-the-Job Training + Other",
+  "Life Skills Training + Other",
+  "Life Skills Training + Coaching and Mentoring + Other",
   "Other"
   )
 
@@ -2114,23 +2126,23 @@ set.seed(268)
 
 network_labels <- c(
   "Apprenticeships",                  
-  "Basic Skills",                   
-  "Basic Skills + Coaching & Mentoring + Other",           
-  "Basic Skills + Life Skills + Coaching & Mentoring + Other",        
-  "Basic Skills + Life Skills + Off-the-job Training + Coaching & Mentoring + Other", 
-  "Basic Skills + Life Skills + Off-the-job Training + Other",    
-  "Basic Skills + Life Skills + Other",            
-  "Basic Skills + Off-the-job Training",            
-  "Basic Skills + Off-the-job Training + Other",        
-  "Basic Skills + Other",               
-  "Coaching & Mentoring + Other",              
-  "Life Skills + Coaching & Mentoring + Other",          
-  "Life Skills + Off-the-job Training + Other",        
-  "Life Skills + Other",               
-  "Off-the-job Training",               
-  "Off-the-job Training + On-the-job Training + Other",     
-  "On-the-job Training",                
-  "On-the-job Training + Other",           
+  "Basic Skills Training",                   
+  "Basic Skills Training + Coaching and Mentoring + Other",           
+  "Basic Skills Training + Life Skills Training + Coaching and Mentoring + Other",        
+  "Basic Skills Training + Life Skills Training + Off-the-Job Training + Coaching and Mentoring + Other", 
+  "Basic Skills Training + Life Skills Training + Off-the-Job Training + Other",    
+  "Basic Skills Training + Life Skills Training + Other",            
+  "Basic Skills Training + Off-the-Job Training",            
+  "Basic Skills Training + Off-the-Job Training + Other",        
+  "Basic Skills Training + Other",               
+  "Coaching and Mentoring + Other",              
+  "Life Skills Training + Coaching and Mentoring + Other",          
+  "Life Skills Training + Off-the-Job Training + Other",        
+  "Life Skills Training + Other",               
+  "Off-the-Job Training",               
+  "Off-the-Job Training + On-the-Job Training + Other",     
+  "On-the-Job Training",                
+  "On-the-Job Training + Other",           
   "Other",                  
   "Services as usual")
 
@@ -2176,7 +2188,7 @@ education_nma_component_visualisation$heatmat +
 
 ::: custom-footnote
 **Plot Legend:**\
-*BS:* Basic Skills, *LS:* Life Skills, *OFF-JT:* Off-the-job training, *ON-JT:* On-the-job-training, *C&M:* Coaching and mentoring, *OTH:* Other (residual) component.
+*BS:* Basic Skills Training, *LS:* Life Skills Training, *OFF-JT:* Off-the-Job Training, *ON-JT:* On-the-job-training, *C&M:* Coaching and Mentoring, *OTH:* Other (residual) component.
 :::
 
 ### Summary results in league table
@@ -2361,7 +2373,7 @@ Combinations of components (listed in alphabetical order) from included studies 
 Direct evidence (i.e., sourced from pairwise comparisons) are shown in blue.\
 Indirect effects (i.e., from the NMA) are shown in gray.\
 **Legend:**\
-*BS:* Basic Skills, *LS:* Life Skills, *OFF-JT:* Off-the-job training, *ON-JT:* On-the-job-training, *C&M:* Coaching and mentoring, *OTH:* Other (residual) component.
+*BS:* Basic Skills Training, *LS:* Life Skills Training, *OFF-JT:* Off-the-Job Training, *ON-JT:* On-the-job-training, *C&M:* Coaching and Mentoring, *OTH:* Other (residual) component.
 :::
 
 ### Fit additive component NMA
@@ -2371,6 +2383,7 @@ Indirect effects (i.e., from the NMA) are shown in gray.\
 #| message: false
 #| name: nma-education-completion-additive
 #| fig-cap: Forest plot showing the results of an additive CNMA for education completion
+#| fig-width: 7
 #| fig-height: 2.5
 #| label: fig-nma-education-completion-additive
 #| cache: true
@@ -2388,10 +2401,10 @@ education_additive_component_network_meta_plot_data <- netcomplex(
 
 component_labels <- c(
   "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
-  "On-the-job Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
   "Other")
 
 forest(
@@ -2418,13 +2431,13 @@ forest(
 
 For education completion, the review team identified four potential pairs of components that could be combined in an interaction. They were:
 
--   On-the-job training x Other
+-   On-the-Job Training x Other
 
 -   Basic Skills x Other
 
--   Life Skills x Other
+-   Life Skills Training x Other
 
--   Coaching & Mentoring x Other
+-   Coaching and Mentoring x Other
 
 As with employment status, there were no significant differences in the impact of the components individually or interacting in any of these models --- these results are presented in the forest plots below.
 
@@ -2432,7 +2445,8 @@ As with employment status, there were no significant differences in the impact o
 #| echo: false
 #| message: false
 #| name: nma-education-completion-interaction-onjt-oth
-#| fig-cap: Forest plot depicting results of CNMA with interaction between On-the-job training x Other for education completion
+#| fig-cap: Forest plot depicting results of CNMA with interaction between On-the-Job Training x Other for education completion
+#| fig-width: 7
 #| fig-height: 2.5
 #| label: fig-nma-education-completion-interaction-onjt-oth
 #| cache: true
@@ -2454,12 +2468,12 @@ education_interaction_component_network_meta_ojt_oth_plot_data <- netcomplex(
 
 component_labels <- c(
   "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
-  "On-the-job Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
   "Other", 
-  "On-the-job Training x Other"
+  "On-the-Job Training x Other"
   )
 
 forest(
@@ -2486,7 +2500,8 @@ forest(
 #| echo: false
 #| message: false
 #| name: nma-education-completion-interaction-ls-oth
-#| fig-cap: Forest plot depicting results of CNMA with interaction between Life Skills x Other for education completion
+#| fig-cap: Forest plot depicting results of CNMA with interaction between Life Skills Training x Other for education completion
+#| fig-width: 7
 #| fig-height: 2.5
 #| label: fig-nma-education-completion-interaction-ls-oth
 #| cache: true
@@ -2510,12 +2525,12 @@ education_interaction_component_network_meta_ls_oth_plot_data <- netcomplex(
 
 component_labels <- c(
   "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
-  "On-the-job Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
   "Other", 
-  "Life Skills x Other"
+  "Life Skills Training x Other"
   )
 
 forest(
@@ -2543,6 +2558,7 @@ forest(
 #| message: false
 #| name: nma-education-completion-interaction-bs-oth
 #| fig-cap: Forest plot depicting results of CNMA with interaction between Basic Skills x Other for education completion
+#| fig-width: 7
 #| fig-height: 2.5
 #| label: fig-nma-education-completion-interaction-bs-oth
 #| cache: true
@@ -2566,10 +2582,10 @@ education_interaction_component_network_meta_bs_oth_plot_data <- netcomplex(
 
 component_labels <- c(
   "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
-  "On-the-job Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
   "Other", 
   "Basic Skills x Other"
   )
@@ -2598,7 +2614,8 @@ forest(
 #| echo: false
 #| message: false
 #| name: nma-education-completion-interaction_cm_oth
-#| fig-cap: Forest plot depicting results of CNMA with interaction between Coaching & Mentoring x Other for education completion
+#| fig-cap: Forest plot depicting results of CNMA with interaction between Coaching and Mentoring x Other for education completion
+#| fig-width: 7
 #| fig-height: 2.5
 #| label: fig-nma-education-completion-interaction_cm_oth
 #| cache: true
@@ -2622,12 +2639,12 @@ education_interaction_component_network_meta_cm_oth_plot_data <- netcomplex(
 
 component_labels <- c(
   "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
-  "On-the-job Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
   "Other", 
-  "Coaching & Mentoring x Other"
+  "Coaching and Mentoring x Other"
   )
 
 forest(
@@ -2657,7 +2674,8 @@ forest(
 #| message: false
 #| name: nma-education-completion-nma-comparison
 #| fig-cap: Forest plot depicting results of Interaction, Additive and standard CNMA of component combinations on education completion
-#| fig-height: 23
+#| fig-width: 7
+#| fig-height: 14
 #| label: fig-nma-education-completion-nma-comparison
 #| cache: true
 #| crop: true
@@ -2683,10 +2701,10 @@ education_forest_plot_data <- netbind(
   name = c(
     "Standard CNMA", 
     "Additive CNMA", 
-    "On-the-job training x Other Interaction CNMA",
+    "On-the-Job Training x Other Interaction CNMA",
     "Basic Skills x Other Interaction CNMA",
-    "Life Skills x Other Interaction CNMA",
-    "Coaching & Mentoring x Other Interaction CNMA"
+    "Life Skills Training x Other Interaction CNMA",
+    "Coaching and Mentoring x Other Interaction CNMA"
     ), 
   col.study = colour_palette, 
   col.square = colour_palette
@@ -2719,6 +2737,7 @@ forest(
 #| name: nma-education-completion-pub-bias
 #| fig-cap: Comparison-adjusted funnel plot for education completion
 #| label: fig-nma-education-completion-pub-bias
+#| fig-width: 8
 #| fig-height: 6
 #| cache: true
 #| crop: true
@@ -2750,7 +2769,7 @@ funnel(
 
 ::: custom-footnote
 **Plot Legend:**\
-*BS:* Basic Skills, *LS:* Life Skills, *OFF-JT:* Off-the-job training, *ON-JT:* On-the-job-training, *C&M:* Coaching and mentoring, *OTH:* Other (residual) component.
+*BS:* Basic Skills Training, *LS:* Life Skills Training, *OFF-JT:* Off-the-Job Training, *ON-JT:* On-the-job-training, *C&M:* Coaching and Mentoring, *OTH:* Other (residual) component.
 :::
 
 ### Evaluate incoherence
@@ -2783,6 +2802,7 @@ The results --- depicted in @fig-nma-education-completion-subgroup-study-populat
 #| fig-subcap: 
 #|   - "Studies involving young people\nwith reported additional barriers"
 #|   - "Studies involving young people\nwithout reported additional barriers"
+#| fig-width: 5.5
 #| fig-height: 2
 #| label: fig-nma-education-completion-subgroup-study-population
 #| cache: true
@@ -2843,9 +2863,9 @@ education_additive_component_network_meta_population_without_complex_needs_plot_
 # visualise results
 component_labels_barriers <- c(
   "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
   "Other"
   )
 
@@ -2869,10 +2889,10 @@ forest(
 
 component_labels_no_barriers <- c(
   "Basic Skills", 
-  "Coaching & Mentoring", 
-  "Life Skills", 
-  "Off-the-job Training", 
-  "On-the-job Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
   "Other"
   )
 
