@@ -87,6 +87,8 @@ The analysis code is available in a [GitHub repository](https://github.com/davet
 
 ## Additional detail on search strategy
 
+### @apunyo2022interventionsincreaseyouth EGM
+
 All impact evaluations classified as either 'low', 'medium' or 'high-quality' included in the @apunyo2022interventionsincreaseyouth EGM were screened for relevance if they appeared in any of the following intervention categories (as defined by the EGM):
 
 -   Life Skills Training
@@ -104,6 +106,22 @@ These categories were further filtered using the following outcome categories:
 -   Earnings and salary
 
 -   Education completion and qualification
+
+### @youthemploymentegm2017 EGM
+
+All studies included in the following 'interventions' were screened for inclusion:
+
+-   Technical skills training
+
+-   Business skills training
+
+-   Literacy/numeracy skills training
+
+-   Soft skills training
+
+### @kluveInterventionsImproveLabour2017 Systematic Review
+
+All studies included in this review were screened for inclusion.
 
 ## Grey literature search strategy
 
@@ -136,6 +154,8 @@ These categories were further filtered using the following outcome categories:
 +------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
 
 : Additional sources and methods used to identify relevant studies {#tbl-ye-nma-additional-sources-lit} {tbl-colwidths="\[30,60,10\]"}
+
+## Inclusion and exclusion criteria
 
 +------------------+------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | PICOSS           | Inclusion Criteria                                                                                   | Exclusion Criteria                                                                                                                                           |
