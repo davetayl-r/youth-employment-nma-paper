@@ -1,0 +1,1701 @@
+---
+title: "Employment and skills interventions designed to assist young people to enter the labour market in high income countries: A component network meta-analysis"
+shorttitle: "Employment and skills interventions designed to assist young people to enter the labour market\nin high income countries"
+author:
+  - name: David Taylor$^{1}$
+    corresponding: true
+    email: david.taylor@monash.edu
+    orcid: 0000-0001-8801-7488
+    affiliations: 
+    - name: Monash University
+      department: Data Matters
+      city: Melbourne
+    role: 
+    - investigation
+    - conceptualisation
+    - data curation
+    - methodology
+    - formal analysis
+    - writing
+  - name: Rebecca Featherston$^{1}$
+    orcid: 0000-0003-0096-5913
+    affiliations: 
+    - name: Monash University
+      department: Data Matters
+      city: Melbourne
+    role: 
+    - methodology
+    - investigation
+    - editing
+  - name: Eleanor M. Ott$^{2}$
+    affiliations: 
+    - name: Centre for Evidence and Implementation
+      city: London
+    role: 
+    - funding acquisition
+    - project administration
+    - resources
+    - investigation
+    - editing
+  - name: Becci Newton$^{3}$
+    affiliations: 
+    - name: Institute for Employment Studies
+      city: Brighton
+    role: 
+    - conceptualisation
+    - editing
+  - name: Emily E. Tanner-Smith$^{4}$
+    orcid: 0000-0002-5313-0664
+    affiliations: 
+    - name: Univesity of Oregon
+      department: HEDCO Institute for Evidence-Based Educational Practice
+      city: Eugene OR
+    role: 
+    - formal analysis
+    - validation
+    - editing
+  - name: Aron Shlonsky$^{1}$
+    orcid: 0000-0001-8096-726X
+    affiliations: 
+    - name: Monash University
+      department: Data Matters  
+      city: Melbourne
+    role: 
+    - methodology
+    - investigation
+    - conceptualisation
+    - validation
+    - editing
+abstract: |
+  
+  **Background:** Young people seeking to enter the labour market may be limited by their lack of skills and experience, and employers’ perceptions of these, relative to slightly older, more experienced workers. For young people experiencing disadvantage, multiple, compounding barriers make transitioning to employment even more of a challenge. A wide range of employment and skills programs, which are generally composed of multiple components, have been implemented globally to support young people to enter and remain in the labour market. This rapid review and component network meta-analysis (CNMA) assessed the impact of components of employment and skills programs on supporting young people to attain employment in high-income countries. 
+  
+  **Methods:** Evidence was collated from evaluations of employment and skills programs that included the following components: Apprenticeships, Basic Skills Training, Life Skills Training, On-the-Job Training, Off-the-Job Training, or Coaching and Mentoring. The pragmatic search strategy mined the results of a previous systematic review and two evidence and gap maps (EGM) that had investigated this topic, supplemented with a grey literature search. Studies that utilised randomised or non-randomised studies that allowed for the estimation of counterfactual outcomes were eligible for inclusion. Outcomes of interest were post-intervention employment and commencement or completion of educational qualifications. A CNMA approach was applied to quantitatively assess the impact of delivering either combinations of components or individual components on outcomes of interest. Supplementary analyses were undertaken to test the robustness of the results. 
+  
+  **Results:** Fifty-eight (n=58) studies were identified that met the inclusion criteria, most of which were rated with low or medium confidence following formal quality assessment. Several combinations of components had an impact on employment status, and Off-the-Job Training specifically had a moderate positive impact when assessed individually. Both On-the-Job Training and Off-the-Job Training had a very large positive impact when provided to a disadvantaged sub-population who reported facing additional barriers. No components, delivered individually or in combination, had any impact on education completion.
+  
+  **Conclusions:** Employment and skills programs are different both in their design and in the way they affect outcomes for participants. The large impact they have on disadvantaged populations may provide an opportunity to target their implementation to this group. A range of opportunities exist to expand the scope of research in this space in the future.  
+
+keywords: [Network Meta Analysis, Youth Employment, Active Labour Market Programs, Skills Training, Vocational Training, Labour Economics, Meta-Analysis, Technical and Vocational Training, Coaching and Mentoring, Apprenticeships, Disadvantaged Youth, Marginalised Youth, Life Skills, Basic Skills]
+author-note:
+  disclosures:
+    study-registration: "**Systematic review registration:** OSF: doi.org/10.17605/OSF.IO/J63QT"
+    data-sharing: "**Data availability statement:** The datasets generated and/or analysed during the current study are available in the Github repository https://github.com/davetayl-r/youth-employment-nma-paper"
+    conflict-of-interest: "**Conflicts of interest:** All authors declare they have no conflicts of interest." 
+    financial-support: "**Grant numbers and/or funding information:** This review was funded by the Youth Futures Foundation. The funder had an active role in the conceptualisation of the review by guiding the selection of topics to scope and outcomes to investigate. They also reviewed a version of this paper published as a technical report."
+    gratitude: "**Acknowledgments and credits:** The following individuals provided research assistance and project support. From the Centre for Evidence and Implementation: Jamie Rowland, Sarah McKenzie, Caitlin Clymer, Amy Hall, Felicia Lee, Jade Mitchell, Chloe Ang and Adha Lone. From the Institute for Employment Studies: Alexandra Nancarrow, Daniel Muir, Seemanti Ghosh, Billy Campbell and Beatrice Rosolin."
+floatsintext: true
+#suppress-short-title: true
+#numbered-lines: true
+bibliography: youth_employment_cnma.bib    
+format: 
+  pdf:
+    header-includes: |
+      \usepackage{fancyhdr}
+      \pagestyle{fancy}
+      \fancyhf{}
+      \renewcommand{\headrulewidth}{0.5pt}
+      \fancyhead[LE,RO]{\tiny\slshape EMPLOYMENT AND SKILLS INTERVENTIONS FOR YOUTH: A COMPONENT NETWORK META-ANALYSIS}
+      \fancyhead[RE,LO]{\tiny\slshape TAYLOR ET AL.}  
+      \fancyfoot[R]{\footnotesize\thepage}
+
+fig-cap-location: top
+tbl-cap-location: top
+date: 2024-07-17
+csl: apa-6th-edition.csl
+link-citations: false
+nocite: |
+  @alegre2015impacttrainingintensivelabour, @bauer2014evaluationnewyork, @bloom1993nationaljtpastudy, @brunetti2017workplacetrainingprograms, @centeno2008evaluatingjobsearch, @caliendo2011fightingyouthunemployment, @cave1993jobstartfinalreport, @courtney2011evaluationmassachusettsadolescent, @courtney2019experimentalevaluationtransitional, @canzian2020activelabourmarket, @davis2017rethinkingbenefitsyouth, @donato2018employmenteffectsvocational, @degiorgi2005newdealyoung, @duarte2020evaluationyouthemployment, @ehlert2012temporaryworkactive, @fein2018bridgingopportunitydivide, @fraker2018threeyeareffectsyouth, @geckeler2017helpingdropoutyouth, @gupta2016evaluationlinkinginnovation, @hamalainen2008vocationallabourmarket, @hollenbeck2006netimpactestimates, @hollenbeck2016netimpactbenefitcost, @izzo2000increasingemploymentearnings, @jastrzab1996impactsservicefinal, @kim2019estimatingeffectsindependent, @kopecna2016counterfactualimpactevaluation, @larsson2003evaluationswedishyouth, @maibom2014canactivelabour, @mcclanahan2004enrichingsummerwork, @millenky2014supportingtransitionadulthood, @miller2018layingfoundationfouryear, @miller2005challengerepeatingsuccess, @munoz-repiso2011effectivenesspublictraining, @pastore2019assessingimpactoffand, @price2011nationalevaluationyouth, @quint1997newchancefinal, @roder2014sustainedgainsyear, @rosholm2019bridginggapwelfare, @schaeffer2014rctpromisingvocational, @schochet2008doesjobcorps, @stromback2010earningsschoolingvocational, @theodos2017pathwayshighschool, @wasserman2019engagingyoungmen, @wehman2017effectsemployerbasedintervention 
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| name: pyi-manuscript-global-options
+
+# load required packages 
+library(quarto) 
+library(tidyverse)
+library(ggplot2)
+library(cowplot)
+library(kableExtra)
+library(tinytable)
+library(readxl)
+library(showtext)
+library(tibble)
+library(knitr)
+library(stringr)
+library(meta)
+library(netmeta)
+library(viscomp)
+library(scales)
+library(PRISMA2020)
+
+# ensure required fonts are loaded
+font_add_google("Roboto", "roboto")
+showtext_auto()
+showtext_opts(dpi = 300)
+
+```
+
+$^{1}$ Data Matters, Monash University, Melbourne, Australia  
+$^{2}$ Centre for Evidence and Implementation, London, United Kingdom  
+$^{3}$ Institute for Employment Studies, Brighton, United Kingdom  
+$^{4}$ HEDCO Institute for Evidence-Based Educational Practice, University of Oregon, Eugene, OR, USA  
+$^{*}$ Corresponding author: david.taylor@monash.edu
+
+**Author Contributions:** *DT:* Investigation, Conceptualization, Data Curation, Methodology, Formal Analysis, Writing; *RF:* Methodology, Investigation, Editing; *EMO:* Funding Acquisition, Project Administration, Resources, Investigation, Editing; *BN:* Conceptualization, Editing; *EETS:* Formal Analysis, Validation, Editing; *AS:* Methodology, Investigation, Conceptualization, Validation, Editing.
+
+**Acknowledgments:** The following individuals provided research assistance and project support. From the Centre for Evidence and Implementation: Jamie Rowland, Sarah McKenzie, Caitlin Clymer, Amy Hall, Felicia Lee, Jade Mitchell, Chloe Ang and Adha Lone. From the Institute for Employment Studies: Alexandra Nancarrow, Daniel Muir, Seemanti Ghosh, Billy Campbell and Beatrice Rosolin.
+
+**Systematic review registration:** *OSF:* doi.org/10.17605/OSF.IO/J63QT
+
+**Data availability statement:** The datasets generated and/or analysed during the current study are available in the [Github repository](https://github.com/davetayl-r/youth-employment-nma-paper) https://github.com/davetayl-r/youth-employment-nma-paper
+
+**Conflicts of interest:** All authors declare they have no conflicts of interest.
+
+**Grant numbers and/or funding information:** This review was funded by the Youth Futures Foundation. The funder had an active role in the conceptualisation of the review by guiding the selection of topics to scope and outcomes to investigate. They also reviewed a version of this paper published as a technical report.
+
+# Background
+
+## Youth employment in high-income countries
+
+For young people, obtaining employment is an important marker in their transition to adulthood. Beginning formal employment allows young people to commence accumulating the human capital that will assist them throughout their working life as well as developing their identity, sense of purpose and economic independence [@naval2020employmenteffectsonthejob; @grosemans2020emergingadultsembarking]. Without securing stable employment, it can be more challenging to reach other milestones such as marriage or partnership, parenthood or home ownership [@furstenberg2010newscheduletransitions].
+
+Globally, more than one-fifth (23.5%) of young people were not in education, employment or training (NEET) in 2022 [@internationallabourorganization2023worldemploymentsocial]. At a societal level, this leads to higher welfare expenditure, lost productivity, and diminished tax revenues, alongside social issues like increased crime and social exclusion. For individuals, this detachment from the labour market can have a persistent negative impact on their lifetime earnings. This 'scarring' effect is particularly acute for disadvantaged youth with lower skill levels [@defraja2021woundsthatnot; @schmillen2017scarsyoutheffects].
+
+In 2023, the global unemployment rate for young people aged 15–24 was roughly 14%, three times higher that of adults aged 25 or greater. In high-income countries, the unemployment rate in 2022 was projected to be 11%, which is a return to the pre-COVID levels following a high of 14.5% in 2020 [@internationallabourorganization2022globalemploymenttrends].
+
+The high rates of young people that are classified as NEET, unemployed or economically inactive reflect some of the unique combination of challenges they face when seeking to enter (and remain and progress) in the labour market. They may not have the skills or qualifications required for a role, or if they possess them, may not have required experience. These factors place them at a disadvantage when competing with older, more experienced applicants. For these reasons, young people are also especially vulnerable during exogenous (external) shocks — such as the global financial crisis and COVID-19 pandemic — and their associated economic downturns because, relative to their older counterparts, they have fewer skills and less work experience [@bell2011youngpeoplegreat]. In such situations they are more likely to lose their jobs and experience unemployment.
+
+Young people’s employment prospects are also influenced by structural economic factors. In high-income countries, the latter 20th and early 21st centuries saw the economy shift from being dominated by manufacturing and agriculture to services — altering employment opportunities and the returns to previously in-demand skills [@autor2003skillcontentrecent]. Consequently, demand has increased for roles requiring technical skills and university education, overshadowing opportunities for those intermediate skills previously prevalent in manufacturing roles [@autor2008trendswageinequality]. Diverging opportunities now exist across the skill spectrum, with high-skill positions enjoying wage premiums, and jobs requiring an intermediate level of skills experiencing a decline [@autor2015whyarethere]. Meanwhile, low-skill roles involving routine tasks face offshoring or automation, trends that are likely to continue with further developments in artificial intelligence [@oecd2023oecdemploymentoutlook]. These structural factors may exacerbate employment inequalities among youth, disproportionately affecting those with minimal education and skills, and disadvantaged groups including recent migrants, Indigenous peoples, ethnic minorities, care leavers and disabled young people [@harrison2023careleaverstransition; @lindsay2022exploringrelationshipsrace; @burdorf2023healthinclusivelabour; @rodriguez-modrono2019youthunemploymentneets]. These groups, in particular, may lack the human, social and cultural capital that is accumulated through family, school and social connections that may be necessary to attain and maintain employment [@mouw2003socialcapitalfinding; @freitag2011socialcapitalunemployment; @baalbergen2023socialcapitalits].
+
+## Employment and skills programs for youth in high-income countries
+
+A wide range of policies, programs, and interventions have been deployed to support young individuals to acquire the skills and experience needed to join the workforce. Many of these initiatives fall under the umbrella of Active Labour Market Programs (ALMP), which encompass skills training, expenditure on public employment services and their administration, labour market training, development of programs aimed at assisting youth during their transition from school to work, employment incentives, wage subsidies, support for start-ups, and rehabilitation services [@kluve2017interventionsimprovelabour; @apunyo2022interventionsincreaseyouth; @oecd2021designingactivelabour].
+
+Examining whether ALMPs are effective at improving labour markets outcomes for young people is a fertile area of research. Previous reviews have sought to make sense of this voluminous research using a range of approaches. For instance, Card et al examined the effectiveness of ALMPs for all (both youth and adult) participants using meta-analytic methods twice, with results published in 2010 [@card2010activelabourmarket] and 2018 [@card2018whatworksmeta]. Both times they elicited relevant research by surveying researchers active in labour economics. Their findings were consistent across their reviews, showing that ALMPs had no impact on employment outcomes in the short term, but had positive impacts in the medium term. They observed heterogeneity both within programs — larger gains were observed amongst programs that sought to improve human capital — and some participants — females and the previously long-term unemployed were more likely to benefit.
+
+Like Card et al., Kluve et al. adopted a global focus, however they limited their scope to young people aged 15-35. They used a comprehensive search strategy of published and unpublished sources to identify relevant studies and used meta-analysis [@kluve2017interventionsimprovelabour] and meta-regression methods [@kluve2019youthemploymentprograms] to synthesise their findings. They found interventions with entrepreneurship promotion and skills training had positive effects on both employment and earnings. They also observed larger positive effects in programs that: were delivered in low- and middle-income countries (LMICs), targeted disadvantaged youth and that observed outcomes over a longer time-period. @puerto2022impactactivelabour updated this systematic review — by replicating the methods in the original protocol [@kluve2014protocolinterventionsimprove] — and published their findings in 2022. Their results, which were consistent with the previous review, also highlighted heterogeneity in the impact of different ALMPs between high income countries (HIC) and LMICs. In HICs, ALMPs' positive impact was observed amongst programs that contained skills training interventions, were delivered by public agencies (versus those delivered in collaboration between public and private agencies) and those delivered at the sub-national (i.e., regional) level compared to national programs. Across HIC and LMIC settings, heterogeneity was also observed amongst participants, with positive outcomes more likely amongst programs that served younger (aged \<25), female and disadvantaged populations.
+
+## Why is it important to do this review?
+
+This review was commissioned by the Youth Futures Foundation (YFF) for the express purpose of informing the content of their Youth Employment Toolkit (hereafter 'toolkit'). The toolkit seeks to provide policymakers, practitioners, and employers access to an accurate and accessible synthesis of evidence on effective interventions for supporting disadvantaged young people into employment in HIC.
+
+The review team worked closely with YFF to scope the content for the first iteration the toolkit. This involved refining a list of potential employment and skills programs — sourced from stakeholder engagement undertaken by YFF — by producing a series of ten briefing notes that assessed suitability for quantitative synthesis based on the scope of a recently produced relevant evidence and gap map (EGM) [@apunyo2022interventionsincreaseyouth]. During this scoping process, it was observed that many of the interventions that YFF were interested in consisted of multiple active components. Component network meta-analysis (CNMA) was identified as an appropriate method to disentangle the relative impact of each of the topics of interest. Six topics were selected to include in the scope of the CNMA. A further topic, wage subsidies, was assessed as a standalone review [@nancarrow2023impactwagesubsidies]. Additional information on this process is included in a technical report [@taylor2023networkmetaanalysisemployment]. The impact, of lack thereof, of employment and skills programs is of ongoing interest to policymakers. This review provides the first attempt to disentangle the contribution of common components of these programs and provides an assessment of their impact on employment and education outcomes.
+
+# Methodology
+
+This rapid review and CNMA was guided by the Cochrane Collaboration's guidance on conducting rapid reviews [@garritty2021cochranerapidreviews; @garritty2024updatedrecommendationscochrane] and follows the PRISMA reporting guidelines [@page2021prisma2020statement] — the checklist is available in the supplementary material [@taylor2024employmentskillsinterventions]. A protocol, which was reviewed by the funder (YFF) and its external advisors, was made available on the Open Science Framework (OSF) (https://osf.io/8w79s) prior to the commencement of data extraction [@ott2022protocolnetworkmetaanalysis]. A previous version of this review has been published as a technical report by YFF [@taylor2023networkmetaanalysisemployment].
+
+## Objectives
+
+The objective of this review was to systematically compare the relative effectiveness of individual components of employment and skills interventions to identify which components were most effective in facilitating young people's entry into the labour market in high-income countries. The review was guided by the following research question: What components of employment and skills programs are effective, compared to usual services, at improving employment and education outcomes for vulnerable young people in high income countries?
+
+## Search strategy
+
+Studies included in three evidence synthesis products that had investigated this topic were reviewed: two EGM's by Apunyo et al [@apunyo2022interventionsincreaseyouth] and the International Labour Organization [@internationallabourorganization2017youthemploymentevidence] and a systematic review by @kluve2017interventionsimprovelabour. This was supplemented with a manual search of nine clearinghouses, government agencies and organisations known to be undertaking or consolidating research in this area: the (United States) Social Security Administration's Pathways to Work Evidence Clearinghouse [-@unitedstatesadministrationforchildren&families2022pathwaysworkevidence], the (United States) Department of Labor's Clearinghouse for Labor Evaluation and Research (CLEAR) [-@unitedstatesdepartmentoflabor2022clearinghouselaborevaluation], the (United Kingdom) Department for Work and Pensions, the (United Kingdom) Department for Education, and (United States) Office of Planning, Research and Evaluation, Organisation for Economic Co-operation and Development (OECD), World Bank, Institute for Labor Economics (IZA) and MDRC. The reference lists of included studies were also reviewed. A complete search strategy is available in the supplementary material [@taylor2024employmentskillsinterventions].
+
+## Study Eligibility Criteria
+
+Studies were included if they evaluated employment and skills programs targeted at unemployed youth aged 16-30 years in high income countries, as defined by the World Bank [-@worldbank2022worldbankcountry], and published in English. Interventions were eligible if they included one or more of the following mutually exclusive components: Apprenticeships, Basic Skills Training, Life Skills Training, On-the-Job Training, Off-the-Job Training, or Coaching and Mentoring (defined in @tbl-cnma-components). Comparators could be usual services, no intervention, another intervention, or wait-list control.
+
+The review explored two outcomes. The first was entry to employment post intervention. This included any outcome that represented an individual's subsequent employment status such as: employment status; hours worked; or earnings/salary. The second was completion of educational qualifications, including any outcome that represented an individual's completion of an educational qualification such as: secondary/high school or equivalent completion; vocational education commencement; and university commencement.
+
+Studies using either individual or cluster-level designs were included as were those that used randomised and some non-randomised approaches. Acceptable non-randomised studies of interventions (NRSI) methods included: difference-in-differences, synthetic control, selection on observables (i.e., covariate matching, propensity score-based methods, doubly robust methods, regression adjustment), regression discontinuity, instrumental variable estimation and other non-equivalent control group designs using parallel cohorts that adjusted for baseline equivalence. Additional detail on study eligibility criteria is available in the review protocol [@ott2022protocolnetworkmetaanalysis] and supplementary material [@taylor2024employmentskillsinterventions].
+
+```{r}
+#| label: tbl-cnma-components
+#| echo: false
+#| warning: false
+#| message: false
+#| tbl-cap: "Definitions of intervention components"
+#| tbl-width: 8
+#| tbl-align: center
+
+# create data frame with intervention component definitions
+component_data <- tibble(
+  Component = c(
+    "Apprenticeships",
+    "On-the-Job Training",
+    "Off-the-Job Training",
+    "Basic Skills Training",
+    "Life Skills Training",
+    "Coaching and Mentoring"
+  ),
+  Description = c(
+    "Include the attainment of skills required for mastery of an occupational skill; both On-the-Job Training and Off-the-Job Training elements; the On-the-Job Training component needs to be paid; the Off-the-Job Training component needs to be provided by an accredited learning provider; completion leads to a recognised qualification (either national or state-level); and be at least 12 months in length (distinguishing it from an On-the-Job Training).",
+    "Include a formal arrangement between an employer and training/intervention provider where the participant undertakes training On-the-Job that leads to the development of practical skills (distinguishing it from Basic Skills Training); and a training period that lasts at least six weeks, but is less than twelve months (distinguishing it from an Apprenticeship).",
+    "Include classroom (or equivalent) based curricula that leads to the development of practical skills (distinguishing it from Basic or Life Skills Training); possibly contribute toward the achievement of a certificate or qualification (but not a high school or equivalent qualification); last at least 6-12 months; and be provided on a full-time basis.",
+    "Include training in a fundamental skill that is essential for re-engaging with education or attaining employment e.g., literacy and numeracy and digital skills.",
+    "Include training in 'soft skills' that help communicate and build relationships, emotional intelligence, confidence etc.; or training in basic practical skills for day-to-day life such as self-care and financial literacy.",
+    "Include a structured mentoring or coaching component that is a formal part of the program or intervention."
+  )
+) 
+
+# create table
+component_data |>
+  kable(
+    col.names = c(
+      "Intervention component", 
+      "Description of the intervention component needed to..."),
+    escape = FALSE,
+    booktabs = TRUE
+  ) |>
+  kableExtra::column_spec(1, width = "4cm", italic = TRUE) |>
+  kableExtra::column_spec(2, width = "12cm") |>
+  kableExtra::row_spec(0, bold = TRUE) |>
+  kable_styling(
+    latex_options = c(
+      "repeat_header"),
+      font_size = 9
+  )
+```
+
+## Data collection
+
+### Study selection
+
+Titles and abstracts were independently screened by two reviewers, with conflicts resolved by a third reviewer. Full-text versions of potentially relevant studies were independently screened by two reviewers, with conflicts resolved in discussion with a third reviewer. Mendeley [-@mendeley2019mendeleyreferencemanager] was used for deduplication, Covidence was used for literature screening [@veritashealthinnovationcovidencesystematicreview] and Zotero was used for library storage and reference management [@corporationfordigitalscholarship2022zotero].
+
+### Data extraction
+
+Data were extracted by one reviewer into a shared spreadsheet (Google Sheets) that included details on study characteristics, participants, interventions, comparators, outcomes and quantitative results. To minimise bias in the transcription of results, this was reviewed by a second reviewer. Study authors were contacted to request any missing data necessary for analysis.
+
+### Coding of interventions
+
+Interventions were coded into their constituent components using the definitions included in @tbl-cnma-components by a single reviewer. These results were reviewed by a second reviewer. Conflicts were resolved through discussion between the two reviewers.
+
+### Studies reporting multiple measures of treatment effect
+
+Where studies reported multiple treatment effects from different model specifications, the following hierarchy was applied to assist in the selection of model results for calculating effect sizes for inclusion in the synthesis: a) Intention to Treat (ITT); b) Average Treatment Effect (ATE), c) Average Treatment Effect on the Treated (ATT), and c) Local Average Treatment Effect (LATE). In addition to this hierarchy, where authors reported both means and regression adjusted means, regression adjusted means were used for effect size calculations.
+
+### Studies reporting multiple measures of the same outcome construct
+
+Where studies reported multiple outcomes that investigated the same construct, the following selection hierarchy was applied to consistently select an outcome. For employment status: a) ever worked; b) worked in previous period; c) currently working; and d) employment probability. Definitions for these terms are included in the supplementary material. For education completion, some studies reported an outcome capturing ‘secondary school, high school or equivalent completion’, while others reported ‘high school completion’ and ‘attainment of high school equivalent qualification’ separately. Where these outcomes were reported separately, they were combined. Instances when this occurred are detailed in the supplementary material.
+
+## Assessment of confidence in results
+
+Study confidence was assessed using the Quality Assessment of Impact Evaluations tool — a six-domain tool that assesses confounding, sample size, attrition, intervention description, outcome measurement and baseline balance [@white2022evidencegapmap]. Results from each domain were pooled to provide a measure of overall study confidence categorised as low, medium or high. Assessments were undertaken by one reviewer, with their results reviewed by the second reviewer. Disagreement was resolved through discussion between the two reviewers and with other members of the review team.
+
+## Unit of analysis issues
+
+The unit of analysis for included studies was at the individual level. No unit of analysis issues were identified in the included studies.
+
+## Dealing with missing data
+
+For those studies that did not report sufficient data to calculate or transform effect sizes, the study’s primary authors were contacted to request the necessary information. Authors of twenty-two (n=22) included studies were contacted to request additional information, five (n=5) of whom responded. When information was either unavailable or insufficient to calculate an effect size, attempts were made to derive this information using reasonable assumptions consistent with those suggested by the Cochrane Collaboration [@higgins2023cochranehandbooksystematic]. Instances where this occurred are detailed in the supplementary material [@taylor2024employmentskillsinterventions].
+
+## Repeated measures of participants
+
+Where studies reported the same outcome at multiple time points, the outcome reported at the last time point was selected, providing the longest possible follow-up available across studies.
+
+## Data analysis and quantitative synthesis
+
+### Effect size transformation
+
+The Standardised Mean Difference (SMD) was selected as the most appropriate effect size to employ for this synthesis as it supports the transformation of continuous and binary outcomes reported in a wide range of formats (e.g., regression coefficients and mean differences). As Cohen’s *d* is known to be biased in small samples, Hedges’ *g*, which corrects for this bias, was used.
+
+Effect sizes were transformed using the `esc` package developed by Lüdecke [-@ludecke2019esceffectsize], which is an R implementation of Wilson’s [-@wilsonpracticalmetaanalysiseffect] Effect Size calculator — for the R Project for Statistical Computing [@rcoreteam2024languageenvironmentstatistical]. Methods used to transform each type of reported result are included in the supplementary material [@taylor2024employmentskillsinterventions].
+
+Some results required additional manipulation to obtain a study-level effect size. These included situations where: a) results were only reported at the subgroup level; b) treatment and comparison sample sizes were not reported; and c) where results were reported graphically. A catalogue of instances where this occurred, and decisions that were made in each occurrence, are provided in the supplementary material [@taylor2024employmentskillsinterventions].
+
+### Quantitative synthesis of results
+
+Network meta-analysis (NMA) is a statistical technique that synthesises direct evidence (head-to-head comparisons in studies) and indirect evidence (from studies where conditions are indirectly linked via a common comparator) to allow comparison of multiple interventions in a single analysis [@tsokani2022componentnetworkmetaanalysis]. It relies on three assumptions: consistency (the stability of relative effect sizes across different comparisons), transitivity (the comparability of treatment-effect modifiers across studies), and additivity (the assumption that the overall effect of an intervention is the sum of its component effects).
+
+CNMA is an extension of network meta-analysis (NMA) that allows for the disentanglement of the effects of multiple components that are delivered together in interventions [@petropoulou2021reviewmethodsaddressing]. There are three major types of CNMAs. In a standard — or ‘full-interaction’ — CNMA, each combination of components is considered as a separate intervention and is assessed at that level. An additive CNMA assumes that each intervention component has a separate independent effect and that the effect of an intervention is equal to the sum of the component effects (the additivity assumption). Finally, an interaction CNMA extends that additive CNMA by interacting two or more pairs (or trios etc.) of intervention components meaning that the total effect can be larger or smaller than the sum of its effects.
+
+Since employment and skills programs often consist of multi-component interventions, CNMA was selected as the preferred method for this review due to its ability to disentangle the relative contribution of each component. Standard, additive and interactive CNMA models were tested and compared for each outcome (see @tbl-cnma-quant-process for summary of this process). Random-effects specifications were selected to account for unmeasured variability. Analysis was undertaken using the `netmeta` R package [@balduzzi2023netmetapackagenetwork]. Results are presented as forest plots.
+
+```{r}
+#| label: tbl-cnma-quant-process
+#| echo: false
+#| warning: false
+#| message: false
+#| tbl-cap: "Quantitative analysis process"
+#| tbl-width: 8
+#| tbl-align: center
+
+# create data frame with quant process
+quant_process_data <- tibble(
+  Analysis = c(
+    "Fit Standard CNMA",
+    "Fit Additive CNMA",
+    "Fit Interaction CNMA",
+    "Undertake subgroup analysis",
+    "Undertake sensitivity analysis"
+  ),
+  Objective = c(
+    "Assess the effect of combinations of components (i.e., interventions as delivered) on outcomes of interest compared to Services as Usual",
+    "Determine the impact of individual components of interventions on outcomes of interest compared to Services as Usual",
+    "Test the additivity assumption by assessing if any of the components that are delivered together have a multiplicative effect on outcomes of interest compared to Services as Usual", 
+    "Assess if the effect of individual components of interventions differs by characteristics of included studies",
+    "Determine if the impact of individual components of interventions vary based on the study design used")
+  ) 
+
+# create table
+quant_process_data |>
+  kable(
+    escape = FALSE,
+    booktabs = TRUE
+  ) |>
+  kableExtra::column_spec(1, width = "4cm", italic = TRUE) |>
+  kableExtra::column_spec(2, width = "12cm") |>
+  kableExtra::row_spec(0, bold = TRUE) |>
+  kable_styling(
+    latex_options = c(
+      "repeat_header"),
+      font_size = 9
+  )
+```
+
+### Selection of outcomes for inclusion in NMA
+
+The feasibility of synthesising each outcome in an NMA was examined through considering: a) if the reported outcomes assessed the same construct; b) whether the reported result could be transformed into a common effect size; c) if there were enough studies to populate an NMA (which was prespecified as a minimum number of ten studies).
+
+### Selection of interactions
+
+There might be instances where delivering multiple components simultaneously may have a multiplicative effect on outcomes for participants (i.e., the effect of two components is greater than the sum of their parts). A series of interaction models were fitted to test this. For each outcome, interaction CNMAs were built and tested for each pair of components present in the NMA treatment composition matrix.
+
+## Assessment of network coherence
+
+The transitivity assumption requires the studies included in the analysis to be similar, on average, across important factors that may influence their relative effect. The quantitative analogue of transitivity is called coherence. The presence of important clinical and/or methodological variation across included studies may be reflected in disagreement between direct and indirect sources of evidence, violating the coherence assumption [@chaimani2022chapter11undertaking].
+
+### Local incoherence
+
+Following guidance from the Cochrane handbook, node splitting was used to assess local incoherence among various component combinations by 'Separating Indirect and Direct Evidence' (SIDE) [@chaimani2022chapter11undertaking]. This technique divides the evidence for each component combination into direct and indirect forms, enabling the evaluation of the contribution and consistency of both types of evidence for each estimate.
+
+### Global incoherence
+
+Incoherence can also occur at the global (network) level. Global incoherence was measured by fitting a design-by-treatment interaction random effects model. Cochran's Q was employed to assess the level of incoherence [@higgins2012consistencyinconsistencynetwork; @krahn2013graphicaltoollocating].
+
+## Subgroup analysis
+
+Subgroup analyses were undertaken that explored if results varied by: study confidence (studies assessed as high confidence vs. low or medium confidence); location (studies conducted in the United States vs. other locations); study population (studies conducted with youth with reported additional barriers vs. youth without additional barriers).
+
+### Defining youth with reported additional barriers
+
+Employment and skills programs often target young people facing educational, social, and economic disadvantages. Yet, certain interventions specifically cater to especially vulnerable groups facing structural disadvantages or additional employment barriers — which were characterised as ‘reported additional barriers.’ These interventions were identified by coding studies according to their focus on serving or reporting on such populations. This was defined as greater than 50% of the population receiving the program has one or more of the following reported characteristics: have a self-identified or diagnosed physical or intellectual disability, current or former experience with the out-of-home care system (i.e., a care leaver), self-identified or diagnosed mental health condition, current or former experience with the juvenile justice system, identifies as member of First Nations or Indigenous community, identifies as LGBTIQ+, is a single parent, or if the program was specifically targeted at serving one of the aforementioned populations.
+
+## Sensitivity analysis
+
+Sensitivity analysis explored if results varied by study design (studies using randomised a design vs. studies using a non-randomised design).
+
+## Publication bias
+
+Publication bias was assessed by producing a comparison-adjusted funnel plot for each outcome that plots effect size estimates against a measure of study precision (i.e., standard error), while adjusting for the different number of comparisons present in the network. Each was visually examined to assess the symmetry of the plot, where deviations from an expected funnel shape can indicate potential publication bias; Egger's test was also used to quantitatively test this for the presence of funnel plot asymmetry.
+
+## Contextualising results
+
+To support knowledge translation, two approaches were used to contextualise the results. First, to provide some sense of scale to the reported effect sizes, they were categorised into three groups: ‘high impact’ (g ≥ 0.2), ‘medium impact’ (g \> 0.1 and \< 0.2) and ‘low impact’ (g ≥ 0 and ≤ 0.1). These ranges were developed by YFF based on the findings of a meta-analysis of active labour market programs for youth by Puerto et al [@puerto2022impactactivelabour].
+
+Second, to assist readers, the scale of precise positive effect sizes were contextualised by translating them to Number Needed to Treat (NNT). NNT is a measure that quantifies the number of individuals who need to receive a specific intervention in order for one additional person to experience the desired outcome compared to an alternative [@laupacis1988assessmentclinicallyuseful]. To derive the NNT, a control group event rate (CER) was calculated by taking a weighted average of the CER for each study that reported it for employment status (35 studies) and education completion (21 studies). Given that the results varied by outcome, different CERs were applied for employment status (0.45) and education completion (0.30) outcomes.
+
+## Deviations from the protocol
+
+To assist in the reporting of results, the following changes were made to the way some of the outcomes were reported (without changing their meaning): “High school or equivalent completion” was used instead of “education completion and qualification (i.e., attainment of secondary-school equivalent education qualification),” and “Vocational education commencement” or “University commencement” were used instead of “access to / in education (i.e., enrolment in TVET or university, or completion of intermediate steps e.g., first year of qualification, progression in TVET).”
+
+To minimise the potential for bias identified in the process of conducting this review, additional subgroup and sensitivity analysis, that were not pre-specified, were undertaken (described above).
+
+During the process of coding components of interventions and their comparators it became evident that programs might also include additional components, beyond those of interest to this review, that may affect outcomes of interest. An additional component Other was therefore created to account for their residual contribution and was included in each analysis.
+
+# Results
+
+## Results of the search
+
+The search strategy yielded 987 records, of which 731 were unique and screened for inclusion (@fig-cnma-prisma). From this, 58 studies (reported in 73 papers) met the inclusion criteria and were included in this analysis. To minimise bias from reporting findings from the same study twice, all papers that used the same data source were treated as a single study. In those cases, a primary study was selected as the key reference (detailed in supplementary material) [@taylor2024employmentskillsinterventions].
+
+![PRISMA 2020 flowchart](./inputs/figure/nma_prisma_flowchart.png){#fig-cnma-prisma fig-width="8" fig-cap="PRISMA 2020 flowchart"}
+
+## Included studies
+
+Summary characteristics are included in @tbl-cnma-study-characteristics with study-level detail provided in Table 4. Highlights include that over half (n=32) of included studies used a randomised study design, two-thirds (n=38) were conducted in the United States or were from grey literature (n=40) and just under half (n=28) had been published since 2015. The most common active intervention component was Coaching and Mentoring (n=25), followed by Basic Skills Training (n=21), Off-the-Job Training (n=20) and Life Skills Training (n=19). Forty-five (n=45) studies included an active intervention component beyond the scope of this review which were coded as Other. Comparison components were coded as Services as Usual if no, or insufficient, information was provided to disaggregate elements of the comparator (@fig-cnma-components-breakdown).
+
+```{r}
+#| label: tbl-cnma-study-characteristics
+#| echo: false
+#| warning: false
+#| message: false
+#| tbl-cap: "Summary characteristics of included studies"
+#| tbl-width: 8
+#| tbl-align: center
+
+# create data frame
+summary_characteristics <- tibble(
+  Characteristic = c(
+    "Apprenticeships",
+    "On-the-Job Training", 
+    "Off-the-Job Training",
+    "Basic Skills Training",
+    "Life Skills Training", 
+    "Coaching and Mentoring",
+    "Other",
+    "Employment status",
+    "Hours worked",
+    "Wages or earnings",
+    "High school or equivalent completion",
+    "Vocational education commencement", 
+    "University commencement",
+    "Randomised design",
+    "Non-randomised design",
+    "Peer reviewed publication",
+    "Grey literature",
+    "1990-1994",
+    "1995-1999",
+    "2000-2004", 
+    "2005-2009",
+    "2010-2014",
+    "2015-2019",
+    "2020-",
+    "Reported facing additional barriers",
+    "Reported not facing additional barriers",
+    "United States",
+    "Germany",
+    "Denmark",
+    "Italy", 
+    "Portugal",
+    "Spain",
+    "Australia",
+    "Belgium",
+    "Czechia", 
+    "Finland",
+    "Sweden",
+    "United Kingdom"
+  ),
+  `Number of studies` = c(
+    2, 
+    8,
+    22,
+    21,
+    19,
+    25,
+    52,
+    55,
+    23,
+    38,
+    23,
+    5,
+    3,
+    32,
+    26,
+    17,
+    41,
+    4,
+    2,
+    4,
+    6,
+    14,
+    26,
+    2,
+    17,
+    41,
+    38,
+    4,
+    3,
+    3,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ),
+  `Percentage of total` = c(
+    "3.4",
+    "13.8", 
+    "37.9",
+    "36.2",
+    "32.8", 
+    "43.1",
+    "89.7",
+    "94.8",
+    "39.7",
+    "65.5",
+    "39.7",
+    "8.6",
+    "5.2",
+    "55.2",
+    "44.8",
+    "29.3",
+    "70.7",
+    "6.9",
+    "3.4",
+    "6.9",
+    "10.3",
+    "24.1",
+    "44.8",
+    "3.4",
+    "29.3",
+    "70.7",
+    "65.5",
+    "6.9",
+    "5.2",
+    "5.2",
+    "3.4",
+    "3.4",
+    "1.7",
+    "1.7",
+    "1.7",
+    "1.7",
+    "1.7",
+    "1.7"
+  )
+)
+
+# create the table
+summary_characteristics |>
+  kable(
+    col.names = c("Characteristic", "Number of studies", "% of total"),
+    booktabs = TRUE
+  ) |>
+  kableExtra::column_spec(1, width = "6cm") |>
+  kableExtra::column_spec(2, width = "3cm") |>
+  kableExtra::column_spec(3, width = "3cm") |>
+  kableExtra::row_spec(0, bold = TRUE) |>
+  kableExtra::pack_rows("Intervention components", 1, 7) |>
+  kableExtra::pack_rows("Outcome construct", 8, 13) |>
+  kableExtra::pack_rows("Study design", 14, 15) |>
+  kableExtra::pack_rows("Publication type", 16, 17) |>
+  kableExtra::pack_rows("Year of publication", 18, 24) |>
+  kableExtra::pack_rows("Population characteristics", 25, 26) |>
+  kableExtra::pack_rows("Study location", 27, 38) |>
+  kable_styling(
+    latex_options = c(
+      "repeat_header"),
+      font_size = 9
+  )
+```
+
+```{r}
+#| label: fig-cnma-components-breakdown
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-cap: "Breakdown of components in included studies"
+#| fig-width: 8
+#| fig-height: 4
+#| fig-align: center
+
+# read data
+component_data_location <- "./inputs/data/cnma_component_data.RDS"
+component_data <- readRDS(component_data_location) 
+
+# select relevant components
+clean_component_data <- component_data |>
+  select(
+    study_reference,
+    intervention_basic_skills,
+    intervention_life_skills,
+    intervention_off_job_training,
+    intervention_on_the_job_training,
+    intervention_apprenticeships,
+    intervention_coaching_mentoring,
+    intervention_other,
+    comparison_services_as_usual_only,
+    comparison_basic_skills,
+    comparison_life_skills,
+    comparison_off_job_training,
+    comparison_on_the_job_training,
+    comparison_apprenticeships,
+    comparison_coaching_mentoring,
+    comparison_other
+  ) |>
+  rename(
+    study = study_reference
+  ) |>
+  pivot_longer(
+    cols = (-study),
+    values_drop_na = TRUE) |>
+  mutate(
+    group = case_when(
+      str_detect(name, "intervention_") ~ "Intervention",
+      str_detect(name, "comparison_") ~ "Comparison")) |>
+  group_by(group, name) |>
+  tally() |>
+  mutate(
+    name = str_remove_all(name, "comparison_"),
+    name = str_remove_all(name, "intervention_"),
+    name = str_remove_all(name, "_only"),
+    ) |>
+  mutate(
+    component = case_when(
+      name == "basic_skills" ~ "Basic Skills",
+      name == "life_skills" ~ "Life Skills",
+      name == "off_job_training" ~ "Off-the-job training",
+      name == "on_the_job_training" ~ "On-the-job training",
+      name == "apprenticeships" ~ "Apprenticeships",
+      name == "coaching_mentoring" ~ "Coaching & Mentoring",
+      name == "other" ~ "Other",
+      name == "services_as_usual" ~ "Services as Usual")
+    ) |>
+  mutate(
+    component_type = case_when(
+      name == "other" ~  "Other component",
+      name == "services_as_usual" ~  "Comparison",
+      TRUE ~ "Component of interest")
+    )
+
+# plot figure
+clean_component_data |>
+  ggplot() +
+  aes(
+    x = component,
+    y = n,
+    fill = component_type,
+    label = n) +
+  geom_bar(
+    stat = "identity"
+  ) +
+  geom_text(
+    vjust = -1
+  ) +
+  facet_grid(
+    group ~ .,
+    scales = "free",
+    shrink = FALSE) +
+  lims(
+    y = c(0,60)
+  ) +
+  labs(
+    y = "Frequency component/comparison type\nappears in included studies",
+    x = "Component/comparison type"
+  ) +
+  scale_x_discrete(labels = scales::wrap_format(11)) +
+  scale_fill_manual(
+    values = c(
+      "Comparison" = "#5A5A5A",
+      "Component of interest" = "#006DAE",
+      "Other component" = "#969696"
+    )
+  ) +
+  theme(
+    text = element_text(family = "roboto"),
+    plot.background = element_rect(colour = "#FFFFFF"),
+    legend.position = "none",
+    legend.title = element_blank(),
+    strip.background = element_blank(),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.ticks = element_blank(),
+    axis.line.x = element_blank(),
+    strip.text = element_text(
+      face = "bold",
+      hjust = 0,
+      size = 11
+    )
+  )
+```
+
+## Study confidence
+
+The *Quality Assessment of Impact Evaluations* tool [@white2022evidencegapmap] was used to assess study confidence (@fig-cnma-quality-assessment). Based on the results of this tool, the findings from a majority (53.4%) of included studies were rated as having ‘low confidence’, while only a fifth (19%) were rated as having ‘high confidence’. Low confidence findings were driven by the attrition (n=19) and baseline balance (n=16) domains. This tool penalises studies for failing to report certain information, which, due to their design, are not consistently disclosed in studies using an NRSI approach. Therefore, the 'low confidence' ratings in some studies are partially due to these reporting gaps, which might not accurately reflect issues within these domains.
+
+```{r}
+#| label: fig-cnma-quality-assessment
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-cap: "Summary of confidence in included studies assessment"
+#| fig-width: 8
+#| fig-height: 4
+#| fig-align: center
+#| 
+# read study confidence data
+included_studies_confidence_data_location <- "./inputs/data/quality_appraisal_information.RDS"
+included_studies_confidence_data <- readRDS(included_studies_confidence_data_location)
+
+# clean data
+study_confidence_plot_data <- included_studies_confidence_data |>
+  rename(
+    `Study design` = qa_domain_1_study_design,
+    `Sample size` = qa_domain_2_sample_size,  
+    `Attrition` = qa_domain_3_attrition,
+    `Intervention description` = qa_domain_4_intervention_description,
+    `Outcome definition` = qa_domain_5_outcome_definition,
+    `Baseline balance` = qa_domain_6_baseline_balance,
+    `Overall confidence` = overall_rating
+  ) |>
+  pivot_longer(
+    -study_reference,
+    names_to = "domain",
+    values_to = "rating"
+  ) |> 
+  mutate(
+    domain = factor(
+      domain,
+      levels = c(
+        "Study design",
+        "Sample size",
+        "Attrition",
+        "Intervention description",
+        "Outcome definition",
+        "Baseline balance",
+        "Overall confidence"),
+      ordered = TRUE)
+  ) |>
+  filter(!is.na(rating)) |>
+  mutate(
+    rating = factor(
+      rating,
+      levels = c(
+        "Low confidence", 
+        "Medium confidence",  
+        "High confidence"),
+      ordered = TRUE)
+  ) |>
+  mutate(
+    n = 1
+  ) |>
+  group_by(
+    domain
+  ) |>
+  mutate(
+    total = sum(n)
+  ) |>
+  ungroup() |>
+  group_by(
+    domain,
+    rating,
+    total
+  ) |>
+  tally() |>
+  mutate(
+    per_cent = (n/total) * 100
+  ) |>
+  mutate(
+    domain_group = case_when(
+      domain == "Overall confidence" ~ "total",
+      TRUE ~ "other") 
+  ) 
+
+# prepare plot
+study_confidence_plot_data |> 
+  ggplot() +
+  aes(
+    x = rating,
+    y = per_cent,
+    fill = domain,
+    label = n) +
+  geom_bar(
+    stat = "identity"
+  ) +
+  geom_text(
+    vjust = -.5
+  ) +
+  facet_wrap(
+    domain ~ .,
+    shrink = FALSE,
+    ncol = 4) +
+  lims(
+    y = c(0,110)
+  ) +
+  labs(
+    y = "Per cent of total studies (n=58)",
+    x = "Assessment of study confidence"
+  ) +
+  scale_x_discrete(
+    labels = wrap_format(10)
+  ) +
+  scale_fill_manual(
+    values = c(
+      "Study design" = "#5A5A5A",
+      "Sample size" = "#5A5A5A",
+      "Attrition" = "#5A5A5A",
+      "Intervention description" = "#5A5A5A",
+      "Outcome definition" = "#5A5A5A",
+      "Baseline balance" = "#5A5A5A",
+      "Overall confidence" = "#006DAE"
+    )
+  ) +
+  theme(
+    text = element_text(family = "roboto"),
+    plot.background = element_rect(
+      colour = "#FFFFFF"),
+    legend.position = "none",
+    legend.title = element_blank(),
+    strip.background = element_blank(),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.ticks = element_blank(),
+    axis.line.x = element_blank(),
+    axis.text.x = element_text(
+      size = 8
+    ),
+    strip.text = element_text(
+      face = "bold",
+      hjust = 0,
+      size = 11
+    )
+  ) 
+```
+
+## Employment status outcomes
+
+Fifty-five (n=55) studies were identified that reported sufficient information to a) derive an individual’s employment status and b) transform the result into a common effect size. These results were reported in a range of different outcomes that were grouped into four categories: ever worked following intervention commencement; employed at particular time point following intervention commencement; time to employment following intervention commencement; and employment probability following intervention commencement. Twenty-three (n=23) studies were identified that reported results that allowed for the assessment of a participant’s time in employment and thirty-eight (n=38) studies that reported a participant’s wages or earnings. However, due to these results missing standard errors or standard deviations, only three (n=3) time-in-employment and twelve (n=12) wages or earnings results were able to be transformed into a common effect size. As a result, quantitative synthesis for these outcomes were not pursued. Details of these studies are included in the supplementary material [@taylor2024employmentskillsinterventions].
+
+### Network structure for employment status
+
+The relationships between different components, and combinations of components, are visualised in a network map (@fig-cnma-employment-status-structure). The map shows that the network is ‘fully connected’ (i.e., all nodes are linked), that there are 20 unique treatments (i.e., combinations of components) in the network and 23 designs (i.e., edges between them).
+
+::: landscape
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| name: cnma-employment-status-standard
+#| fig-cap: Forest plot depicting results of a standard CNMA for employment status
+#| fig-width: 14
+#| fig-height: 5
+#| fig-align: center
+#| label: fig-cnma-employment-status-standard
+#| cache: true
+
+# load data
+employment_component_es_data_location <- "../network-meta/nma/data/employment_analysis_data.RDS"
+employment_component_es_data <- readRDS(employment_component_es_data_location)
+
+# specify nma
+employment_network_meta_random_effects <- netmeta(
+  TE = es,
+  seTE = se,
+  treat1 = intervention,
+  treat2 = comparison,
+  studlab = study,
+  data = employment_component_es_data,
+  reference.group = "SAU",
+  sm = "SMD",
+  nchar.trts = 30,
+  common = FALSE,
+  drop.reference.group = TRUE)
+
+# define labels
+component_combination_labels <- c(
+  "On-the-Job Training + Other",
+  "Basic Skills Training + Off-the-Job Training + Other",
+  "On-the-Job Training",
+  "Apprenticeships",
+  "Life Skills Training + Coaching and Mentoring + Other",
+  "Off-the-Job Training",
+  "Basic Skills Training + Life Skills Training + Off-the-Job Training + Other",
+  "Life Skills Training + Off-the-Job Training + Other",
+  "Basic Skills Training + Life Skills Training + Coaching and Mentoring + Other",
+  "Basic Skills Training",
+  "Off-the-Job Training + On-the-Job Training + Other",
+  "Coaching and Mentoring + Other",
+  "Basic Skills Training + Life Skills Training + Other",
+  "Other",
+  "Basic Skills Training + Coaching and Mentoring + Other",
+  "Basic Skills Training + Life Skills Training + Off-the-Job Training + Coaching and Mentoring + Other",
+  "Life Skills Training + Other",
+  "Basic Skills Training + Off-the-Job Training",
+  "Basic Skills Training + Other"
+  )
+
+# plot results
+meta::forest(employment_network_meta_random_effects,
+   studlab = component_combination_labels,
+   reference.group = "SAU",
+   #col.by = "black",
+   xlim = c(-1, 1.5),
+   addrow.subgroups = FALSE,
+   fontsize = 10,
+   spacing = 0.7,
+   leftcols = c("studlab", "prop.direct"),
+   equal.size = FALSE,
+   sortvar = -"TE",
+   label.left = "Favours Usual Services",
+   label.right = "Favours Intervention",
+   drop.reference.group = TRUE)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| name: cnma-employment-status-structure
+#| fig-cap: Network map for employment status NMA
+#| fig-width: 15
+#| fig-height: 10
+#| float: false
+#| fig-pos: "H"
+#| label: fig-cnma-employment-status-structure
+#| crop: true
+#| cache: true
+
+# visualise network structure 
+set.seed(268)
+
+network_labels <- c(
+  "Apprenticeships",                  
+  "Basic Skills Training",                   
+  "Basic Skills Training + Coaching and Mentoring + Other",           
+  "Basic Skills Training + Life Skills Training + Coaching and Mentoring + Other",        
+  "Basic Skills Training + Life Skills Training + Off-the-Job Training + Coaching and Mentoring + Other", 
+  "Basic Skills Training + Life Skills Training + Off-the-Job Training + Other",    
+  "Basic Skills Training + Life Skills Training + Other",            
+  "Basic Skills Training + Off-the-Job Training",            
+  "Basic Skills Training + Off-the-Job Training + Other",        
+  "Basic Skills Training + Other",               
+  "Coaching and Mentoring + Other",              
+  "Life Skills Training + Coaching and Mentoring + Other",          
+  "Life Skills Training + Off-the-Job Training + Other",        
+  "Life Skills Training + Other",               
+  "Off-the-Job Training",               
+  "Off-the-Job Training + On-the-Job Training + Other",     
+  "On-the-Job Training",                
+  "On-the-Job Training + Other",           
+  "Other",                  
+  "Services as usual")
+
+# produce plot
+netgraph(
+  employment_network_meta_random_effects,
+  plastic = FALSE,
+  col = "#006DAE",
+  number.of.studies = TRUE,
+  cex = 0.75,
+  cex.num = 0.9,
+  pos.number.of.studies = 0.7,
+  labels = network_labels)
+```
+
+:::
+
+A component crosstabulation is graphical tool for visualising the distribution of components in a CNMA [@seitidis2023graphicaltoolsvisualizing]. Each cell contains the frequency with which the component appears in the network. Figures in parentheses, in the diagonal elements, represent the proportion of study arms that contain the component. Similarly, figures in parentheses in the off-diagonal elements report the proportion of study arms that include that pair of components (out of those arms that include it in that row). The colour of the tile is relative to the frequency of the corresponding component combination. @fig-cnma-employment-status-comp-vis, for employment status, the numbers reported in the diagonal elements indicate that the most frequently occurring active components — i.e., excluding Other (n=50) and Services as Usual (n=47) — are Off-the-Job Training (18.2 per cent) which was observed in 20/110 intervention arms, followed by Life Skills Training (17.1 per cent) seen in 17/110. The frequencies in the off-diagonal elements suggest that Other was the most frequently combined component, distantly followed by Coaching and Mentoring and Life Skills Training.
+
+### Impact of combinations of components on employment status
+
+A standard CNMA was fitted to examine the effects of combinations of components on employment status. This analysis included fifty-five (n=55) studies comparing 20 different component combinations. Of these, 18.2% (n=10) of the results were assessed as ‘high confidence’. Due to the potential presence of unobserved heterogeneity within both included study designs and populations, a random-effects model was selected.
+
+A moderate degree of heterogeneity ($\tau$ = 0.180) alongside a high level of inconsistency ($I^2$: 96.7%, 95% CI: \[96.1%; 97.2%\]) was identified suggesting that there is substantial variability in effect estimates beyond what may be reasonably attributed to chance. Consequently, caution should be exercised when interpreting the effect estimates, as the observed heterogeneity may impact the generalisability of the results.
+
+The standard CNMA results (@fig-cnma-employment-status-standard) reveal five component combinations that have a high impact on employment status compared to Services as Usual. The most effective combination, which appeared in two studies (n=2), involved On-the-Job Training + Other (*g*=0.48, 95% CI: \[0.11, 0.84\]), with a Number Needed to Treat (NNT) of 5.3 (95% CI: 3.2-22.9). This indicates that, on average, for every five individuals receiving this intervention, one additional person is likely to subsequently find employment. Following on, five studies (n=5) included a combination of Basic Skills Training+ Off-the-Job Training + Other (*g*=0.30, 95% CI: \[0.12, 0.48\]) and an NNT of 8.4 (95% CI: 5.3-20.9). Three studies (n=3) focusing solely on On-the-Job Training report a similar beneficial effect (*g*=0.25, 95% CI: \[0.05, 0.46\]) with an NNT of 10.1 (95% CI: 5.5-50.4). Six studies (n=6) included the combination of Life Skills Training + Coaching and Mentoring + Other (*g*=0.24, 95% CI: \[0.08, 0.39\]), with an NNT of 10.5 (95% CI: 6.5-31.5). Finally, four studies (n=4) included Off-the-Job Training alone (*g*=0.23, 95% CI: \[0.06, 0.40\]) with an NNT of 10.9 (95% CI: 6.3-42.0). These results provide some insight into the impact of combinations of components when they are delivered together.
+
+```{r}
+#| echo: false
+#| message: false
+#| name: cnma-employment-status-comp-vis
+#| fig-cap: Heatmap showing the distribution of components among included studies for employment status
+#| fig-width: 15
+#| fig-align: 'center'
+#| fig-pos: "H"
+#| out.width: '70%'
+#| dpi: 300 
+#| label: fig-cnma-employment-status-comp-vis
+#| cache: true
+#| crop: true
+
+# visualise components included in NMA
+employment_nma_component_visualisation <- compdesc(
+  model = employment_network_meta_random_effects,
+  sep = "+",
+  digits = 0) 
+
+# extract the heatmap
+employment_heatmap <- employment_nma_component_visualisation$heatmat 
+
+# find the text layer and modify its size
+text_layer_index <- which(sapply(employment_heatmap$layers, function(x) inherits(x$geom, "GeomText")))
+if(length(text_layer_index) > 0) {
+  employment_heatmap$layers[[text_layer_index]]$aes_params$size <- 2.5  
+}
+
+# theme heatmp
+employment_heatmap + theme_minimal(base_size = 8) +
+  theme(
+    text = element_text(family = "roboto"),
+    plot.background = element_rect(
+      fill = "white",
+      colour = "white"),
+    legend.position = "bottom",
+    legend.direction = "horizontal"
+  )
+```
+
+::: custom-footnote
+**Plot Legend:**\
+*BS:* Basic Skills Training, *LS:* Life Skills Training, *OFF-JT:* Off-the-Job Training, *ON-JT:* On-the-job-training, *APP:* Apprenticeships, *C&M:* Coaching and Mentoring, *OTH:* Other (residual) component.
+:::
+
+### Impact of individual components on employment status
+
+The influence of individual components of employment and skills programs were examined in an additive CNMA model. This model used the same inputs as the standard CNMA. Similarly to the standard CNMA, a moderate degree of heterogeneity ($\tau$ = 0.197) and a high level of inconsistency ($I^2$: 97.8%, 95% CI: \[97.5%; 98.1%\]) was observed. The same caveats highlighted in interpreting the results of the standard CNMA apply to this analysis.
+
+The results (@fig-cnma-employment-status-additive) showed that individuals in included studies that received Off-the-Job Training had a moderate positive impact (*g*=0.13, 95% CI: \[0.01; 0.25\]) on employment status, suggesting that on average for every 19.3 individuals (95% CI: 10.1-252.5) that undertook Off-the-Job Training, one additional person is expected to be employed. Results for Apprenticeships (*g*=0.22, 95% CI: \[-0.08; 0.52\]) and On-the-Job Training (*g*=0.18, 95% CI: \[-0.00; 0.35\]) spanned the line of no effect. However, there are some indications that the network may be underpowered to detect small but meaningful differences, therefore the precision of these estimates may increase with the inclusion of additional studies in the network.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| name: cnma-employment-status-additive
+#| fig-cap: Forest plot showing the results of an additive CNMA for employment status
+#| fig-width: 7
+#| fig-height: 2.5
+#| label: fig-cnma-employment-status-additive
+#| cache: true
+#| crop: true
+#| apa-two-column: true
+#| fig-align: center
+
+employment_additive_component_network_meta <- netmeta::netcomb(
+  x = employment_network_meta_random_effects, 
+  inactive = "SAU",
+  sep.comps = "+",
+  random = TRUE)
+
+employment_additive_component_network_meta_plot_data <- netcomplex(
+  employment_additive_component_network_meta,  
+  employment_additive_component_network_meta$comps)
+
+component_labels <- c(
+  "Apprenticeships", 
+  "Basic Skills Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
+  "Other")
+
+forest(
+  employment_additive_component_network_meta_plot_data,
+  studlab = component_labels,
+  reference.group = "SAU",
+  #col.by = "black",
+  xlim = c(-0.5, 1),
+  addrow.subgroups = FALSE,
+  fontsize = 10, 
+  spacing = 0.7, 
+  squaresize = 0.9,
+  smlab = "",
+  #smlab = paste("Program Components vs. Usual Services \n",                   "(Employment status)"),
+  label.left = "Favours Usual Services",
+  label.right = "Favours Intervention",
+  drop.reference.group = TRUE,
+  leftlabs = "Intervention component",
+  sortvar = -employment_additive_component_network_meta_plot_data$Comb.random
+  )
+```
+
+### Testing interactions between components for employment status
+
+A core assumption in a CNMA is additivity, which posits that the effect of a multi-component program can be determined by summing the effects of its individual components. This assumption may be overly optimistic if components are expected to reinforce each other. It is possible to account for interactions between components using a model, however such interactions must be jointly present in an included study to test this. Among included studies that reported employment status outcomes five pairs of components that were delivered together were identified and tested using interaction CNMAs: Basic Skills Training x Off-the-Job Training; On-the-Job Training x Other; Basic Skills Training x Other; Life Skills Training x Other; and Coaching and Mentoring x Other. None of the tested interactions were significant at the 95% level indicating there is no evidence of interactions between them. However, it is unclear whether this is due to a lack of statistical power or the absence of an interactive effect. More detailed results are available in the supplementary material [@taylor2024employmentskillsinterventions]. Accordingly, the additive CNMA was identified as the preferred specification to establish component-level effects, mainly due to the absence of evidence for any interactions that would challenge this assumed additivity.
+
+## Education completion outcomes
+
+Twenty-three (n=23) studies were identified that reported an outcome that identified whether an individual competed high school or attained an equivalent qualification (hereafter referred to as ‘education completion'). Three types of outcomes were reported: completion of high school; attainment of equivalent qualification, or completion of high school or equivalent qualification.
+
+Five (n=5) studies were identified that allowed for the determination of whether an individual had commenced vocational education, and three (n=3) studies reported on university commencement. Quantitative synthesis for these outcomes was not pursued. Details of these studies are included in the supplementary material [@taylor2024employmentskillsinterventions].
+
+### Network structure for education completion
+
+The network for education completion was fully-connected and contained 14 unique treatments and 13 designs — a network map and component heatmap is available in the supplementary material [@taylor2024employmentskillsinterventions]. Unlike the network for employment status, this network did not contain any connected loops, meaning that all the evidence derived from this network is either completely direct or completely indirect. The absence of mixed evidence means that it is not possible to determine how consistent the network is either at the local level (between treatments) or globally (across the entire network).
+
+### Impact of combinations of components on education completion
+
+A standard CNMA was fitted to examine the impact of combinations of components on employment status. The network contained twenty-three (n=23) studies that compared 13 different combinations of components. As with CNMA for employment status, a random-effects model was used due to the risk of unobserved heterogeneity. A moderate degree of heterogeneity ($\tau$ = 0.176) and a high level of inconsistency ($I^2$: 81.2%, 95% CI: \[67.3%; 89.1%\]) was detected amongst the effect estimates, therefore the previous cautions raised about interpretation apply here.
+
+The results of the standard CNMA — included in the supplementary material — indicate the none of the different combinations of components had a precise effect on education completion. This means that there is no strong evidence that the observed differences in outcomes are not simply due to chance (i.e., the evidence supporting the effectiveness of any particular combination of components is weak).
+
+### Impact of individual components on education completion
+
+The additive CNMA for education completion used the same inputs as the standard CNMA. Similarly to the standard CNMA, a moderate degree of heterogeneity ($\tau$ = 0.130) and a high level of inconsistency ($I^2$: 73.7%, 95% CI: \[58.1%; 83.5%\]) was detected. The results of the additive model — included in the supplementary material — suggest that study participants who received any of the individual components were no more likely to complete high school, or receive an equivalent qualification, than those individuals who received Services as Usual.
+
+### Testing interactions between components for education completion
+
+Four component pairs that were delivered together were identified and tested for an interaction effect. These were: On-the-Job Training x Other; Basic Skills Training x Other; Life Skills Training x Other; and Coaching and Mentoring x Other. There were no significant differences in the impact of the components individually or interacting in any of these models (results are available in supplementary material). As with employment status outcome, the additive approach was identified as the preferred specification.
+
+## Network coherence
+
+The transitivity assumption requires consistency between results estimated from direct and indirect sources. Network coherence was assessed at both the local-level — through the application of node-splitting — and at the global level — through fitting a design-by treatment model (included in supplementary material).
+
+The results for employment status suggest that a moderate amount of incoherence is present in the network of included studies reporting on that outcome. While the level of incoherence does not present a major concern to the validity of the findings, it does suggest that some caution should be taken when drawing conclusions from combinations of components that rely solely on indirect comparisons or a high proportion of mixed evidence. Despite these observations, confidence in the network's overall integrity remains strong. The majority of mixed and indirect evidence aligns with direct evidence, indicating that the overall conclusions are broadly consistent. Furthermore, the predominance of direct evidence in this analysis also minimises the concern for such potential bias.
+
+It was not possible to assess coherence for education completion due to the absence of indirect comparisons within the network.
+
+## Subgroup analysis
+
+### Study confidence
+
+For employment status, the CNMA revealed no significant differences between the studies rated as high confidence compared to those rated with low or medium confidence (results available in supplementary material). There were insufficient studies to undertake a subgroup analysis by study confidence for education completion.
+
+### Study location
+
+Subgroup analysis by study location revealed that Apprenticeships have a small but significant impact on employment in studies conducted in the United States, however included studies evaluating them were only available from the United States (results available in supplementary material). Therefore, it is unclear whether these findings are generalisable to other countries. There were insufficient studies to undertake a subgroup analysis by study location for education completion.
+
+### Study population
+
+Subgroup analysis by study population (with reported additional barriers vs. without) showed marked differences between the two groups. Amongst those who report additional barriers, very large effect sizes were observed for both On-the-Job Training (*g*=1.58, 95% CI: \[0.88-2.28\]) and Off-the-Job Training (*g*=0.59, 95% CI: \[0.08-1.11\]) (@fig-cnma-employment-status-subgroup-study-population). To put these results in context, for every 2.1 (95% CI: 1.9-3.1) young people facing additional barriers who receive On-the-Job Training, on average, one would be expected to subsequently attain employment. Similarly, for every 4.4 (95% CI: 2.6-31.5) such young receiving Off-the-Job Training, it is expected that one will subsequently be employed.
+
+A medium sized positive impact on employment was also seen amongst young people without reported additional barriers who received Off-the-Job Training (*g*=0.14, 95% CI: \[0.02-0.27\]). This means that, on average, for every 17.9 (95% CI: 9.3-126.2) young people who receive Off-the-Job Training one will subsequently be employed.
+
+The key point emerging from this subgroup analysis is that both On-the-Job Training and Off-the-Job Training have large positive effects on employment outcomes for young people who report facing additional barriers. No significant differences were observed in subgroup analysis by population for education completion; these results are available in the supplementary material [@taylor2024employmentskillsinterventions].
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| name: cnma-employment-status-subgroup-study-population
+#| fig-cap: Forest plot depicting the result of subgroup analysis for employment status by study population
+#| fig-subcap: 
+#|   - "Studies involving young people\nwith reported additional barriers"
+#|   - "Studies involving young people\nwithout reported additional barriers"
+#| fig-width: 5.5
+#| fig-height: 2
+#| out-width: "100%"
+#| float: false
+#| fig-pos: "H"
+#| label: fig-cnma-employment-status-subgroup-study-population
+#| cache: true
+#| layout-ncol: 1
+#| crop: true
+
+# subset data by study population
+employment_network_meta_random_effects_population_complex_needs_data <- employment_component_es_data %>% 
+  filter(complex_population == "Yes")
+
+employment_network_meta_random_effects_population_without_complex_needs_data <- employment_component_es_data %>%
+  filter(complex_population == "No")
+
+# specify standard CNMA for each subgroup
+employment_network_meta_random_effects_population_without_complex_needs <- netmeta(
+  TE = es, 
+  seTE = se, 
+  treat1 = intervention, 
+  treat2 = comparison, 
+  studlab = study, 
+  data = employment_network_meta_random_effects_population_without_complex_needs_data, 
+  reference.group = "SAU", 
+  sm = "SMD", 
+  nchar.trts = 30, 
+  common = FALSE, 
+  drop.reference.group = TRUE
+  )
+
+# specify additive NMA for each subgroup
+employment_additive_component_network_meta_population_complex_needs <- discomb(
+  TE = es, 
+  seTE = se, 
+  treat1 = intervention, 
+  treat2 = comparison, 
+  studlab = study, 
+  data = employment_network_meta_random_effects_population_complex_needs_data, 
+  inactive = "SAU", 
+  reference.group = "SAU", 
+  sm = "SMD", 
+  nchar.trts = 30, 
+  common = FALSE, 
+  drop.reference.group = TRUE)
+
+employment_additive_component_network_meta_population_without_complex_needs <- netcomb(
+  x = employment_network_meta_random_effects_population_without_complex_needs, 
+  inactive = "SAU", 
+  sep.comps = "+", 
+  random = TRUE)
+
+employment_additive_component_network_meta_population_complex_needs_plot_data <- netcomplex(
+  employment_additive_component_network_meta_population_complex_needs,
+  employment_additive_component_network_meta_population_complex_needs$comps)
+
+employment_additive_component_network_meta_population_without_complex_needs_plot_data <- netcomplex(
+  employment_additive_component_network_meta_population_without_complex_needs,
+  employment_additive_component_network_meta_population_without_complex_needs$comps)
+
+# visualise results
+component_labels_barriers <- c(
+  "Basic Skills Training", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
+  "Other"
+  )
+
+forest(
+  employment_additive_component_network_meta_population_complex_needs_plot_data, 
+  studlab = component_labels_barriers, 
+  reference.group = "SAU", 
+  #col.by = "black", 
+  xlim = c(-0.5, 2.5), 
+  addrow.subgroups = FALSE, 
+  fontsize = 7, 
+  spacing = 0.7, 
+  squaresize = 0.9, 
+  smlab = "",
+  #smlab = paste("Studies involving young people\nwith reported additional barriers"), 
+  label.left = "Favours Usual Services", 
+  label.right = "Favours Intervention", 
+  drop.reference.group = TRUE, 
+  leftlabs = "Intervention component", 
+  sortvar = -employment_additive_component_network_meta_population_complex_needs_plot_data$Comb.random)
+
+component_labels_no_barriers <- c(
+  "Apprenticeships",
+  "Basic Skills", 
+  "Coaching and Mentoring", 
+  "Life Skills Training", 
+  "Off-the-Job Training", 
+  "On-the-Job Training", 
+  "Other"
+  )
+
+forest(
+  employment_additive_component_network_meta_population_without_complex_needs_plot_data, 
+  studlab = component_labels_no_barriers, 
+  reference.group = "SAU", 
+  #col.by = "black", 
+  xlim = c(-0.5, 2.5), 
+  addrow.subgroups = FALSE, 
+  fontsize = 7, 
+  spacing = 0.7, 
+  squaresize = 0.9, 
+  smlab = "",
+  #smlab = paste("Studies involving young people\nwithout reported additional barriers"), 
+  label.left = "Favours Usual Services", 
+  label.right = "Favours Intervention", 
+  drop.reference.group = TRUE, 
+  leftlabs = "Intervention component", 
+  sortvar = -employment_additive_component_network_meta_population_without_complex_needs_plot_data$Comb.random)
+```
+
+## Sensitivity analysis
+
+Our sensitivity analysis involved undertaking separate additive CNMAs by study design (RCT vs. NRSI). The results (available in the supplementary material) suggest that the observed overall positive effect of Off-the-Job Training in the additive CNMA may be driven by the larger observed effect sizes in NRSIs. The absence of a statistically significant positive effect among randomised studies may be a result of a lack of statistical power — there are fewer randomised studies than NRSIs — or it may also reflect a more accurate estimate of effect (i.e., the true effect is that Off-the-Job Training has no impact on employment status). There were insufficient studies to undertake sensitivity analysis for the education completion outcome.
+
+## Publication bias
+
+A comparison-adjusted funnel plot was used to assess publication bias. This modified funnel plot allows for the comparison of all studies in the network irrespective of the components that they compare [@chaimani2012usingnetworkmetaanalysis]. This method can be used to identify possible small-study effects through both visual inspection of the funnel plot and application of Egger’s test for funnel plot asymmetry [@egger1997biasmetaanalysisdetected].
+
+Visual inspection of the comparison adjusted funnel plot (available in the supplementary material) and Egger’s test ($t$(45) = 1.19, $p$\>0.05) do not suggest the presence of publication bias for employment status. However, for education completion, both the comparison adjusted funnel plot and Egger’s test ($t$(19) = 0.152, $p$\<0.05) indicate the presence of funnel plot asymmetry. These results suggest that there should be some concern about the possibility of publication bias that favours the intervention for this outcome.
+
+# Discussion
+
+A rapid review and CNMA were used to disentangle the relative impact of six commonly provided individual components of employment and skills programs on an individual’s employment and education outcomes. The review identified 58 relevant primary studies, of which 95% (n=55) were combined in a quantitative synthesis that considered the impact of combinations of components, individual components, interactions between components and whether these results varied using subgroup and sensitivity analysis. All seven intervention components of interest were identified in included studies, with the most commonly occurring being Coaching and Mentoring (n=25) and Basic Skills Training (n=21).
+
+Despite identifying a significant number of studies, the overall confidence in them was mostly low to moderate. The bulk of these studies originated from the United States and most were published post-2010. This observation is important given that the programs and components of interest to this review had been provided to young people in HICs for several decades. At the population-level this analysis found that Off-the-Job Training had a moderate-sized positive impact on the employment status for the young people who have typically accessed these services. No other components had an impact on employment status. No components had an impact on education completion.
+
+The results from the analysis of both outcomes included estimates that provided a low-level of certainty for some components commonly included in employment and skills programs. However, these findings should not be interpreted as evidence that these components are ineffective. The limited number of studies that include some of these components may mean there is insufficient power to detect small effects. Therefore, in this instance, the absence of evidence is not evidence of absence.
+
+To determine if there were any interactions between different components that might amplify (or nullify) their effect when provided together, all instances where any two components were delivered together as part of an ALMP were identified. This provided an opportunity for the components to interact. However, none of the pairs of interacting components had an impact on either outcome.
+
+Subgroup analysis established that the impact of On-the-Job Training and Off-the-Job Training on employment status was significantly amplified when provided to young people who report facing additional barriers. For this population subgroup, the impact of these components is substantial, highlighting the importance of targeted interventions for those facing multiple challenges in entering the labour market. These results align with the meta-regression results reported by Kluve et al. [@kluve2019youthemploymentprograms] and Puerto et al. [@puerto2022impactactivelabour], which indicated that interventions targeting disadvantaged youth were more likely to demonstrate effectiveness compared to those serving a broader population of young people.
+
+One possible explanation for these results is that young people without additional barriers may be more likely to find employment independently given sufficient time and resources. They are less likely to face systemic discrimination, they may have access to stronger social networks, better educational opportunities or face fewer obstacles to navigating the job search process. In contrast, those facing additional barriers may benefit more from the structured support and skill-building provided by interventions that include On-the-Job and Off-the-Job Training components. These components can enhance the human capital of young people facing additional barriers, thereby enabling them to compete more effectively in the labour market.
+
+These findings underscore the importance of considering the unique needs and circumstances of different subgroups when designing and implementing employment and skills programs. Policymakers and practitioners should prioritise interventions that include these components, particularly when serving young people who face multiple barriers to employment. However, it is crucial to be mindful of potential lock-in effects, which occur when participants reduce their job search activities during the program, potentially counteracting its positive impacts.
+
+## Implications for research
+
+There is a need for more rigorous primary research on the effectiveness of employment and skills programs in HICs, particularly those that are not the United States. Future studies should provide detailed descriptions of program content, specifically the core components, activities, duration, and intensity. Decomposition studies that test the effectiveness of individual components would be particularly valuable in advancing a more nuanced understanding of which elements contribute most (or least) to program success. Additionally, researchers should aim to capture detailed information about the population receiving services, including demographics (age, sex, relationship status, sexual and ethnic identity), prior education and/or employment, and population characteristics (disability status, juvenile justice and care experience). It would also be helpful to report information about the cost of providing services. Additionally, key implementation-related information, such as barriers and facilitators and fidelity measures, should also be identified and reported.
+
+Future reviews should also aim to provide a comprehensive understanding of usual services to better contextualise the impact of employment and skills programs. Comparative effectiveness studies and multi-arm experimental trials will aid in creating more robust network structures for future synthesis work. NMAs offer a unique approach to synthesis that can provide valuable insights into the relative effectiveness of different intervention components. The results of these analyses can be used to inform the development of evidence menus and toolkits, such as that developed by YFF, which aim to provide policymakers, funders and practitioners with insights into evidence-informed components for building effective local programs. By focusing on core components rather than prescriptive programs, such toolkits can offer flexibility and adaptability so that interventions can be tailored to meet the needs of the communities in which they are provided.
+
+## Implications for practice and policy
+
+Young people who are NEET face a range of barriers to securing and maintaining employment. The overall findings from this review suggest there is no panacea for this, however the most substantial finding was that two commonly delivered components — On-the-Job and Off-the-Job Training — have a large beneficial effect on employment outcomes for young people who report facing additional barriers. Therefore, the targeted implementation of these program components for this population would appear to be a valuable approach to those commissioning services.
+
+The results of this review are not sufficiently conclusive to warrant a recommendation regarding the inclusion of specific components in an employment and skills program. However, at the population level, Off-the-Job Training showed the greatest impact on youth employment outcomes. Considering this, it would be advantageous for providers of such services to focus on delivering high-quality training that is closely aligned with the existing and anticipated needs of the labour market in the location in which it is provided. Additionally, it is recommended to consider the characteristics of the target cohort, their skills needs, and the implementation factors — such as intensity of support and delivery mode — that would maximise engagement. None of the program components generated harmful effects on participants, so there is no need to exclude any of them from programs due to concerns about adverse effects.
+
+Organisations commissioning employment and skills programs for young people are strongly encouraged to fund and support methodologically rigorous evaluations to further develop the available evidence.
+
+## Limitations of this review
+
+Noting that the primary purpose of this review was to inform the development of YFF’s toolkit, for which there were constraints in time and resources, a pragmatic approach was adopted to collate existing evidence. The results of a previously published systematic review [@kluve2019youthemploymentprograms] and two EGM’s [@apunyo2022interventionsincreaseyouth; @internationallabourorganization2017youthemploymentevidence] were leveraged, and supplemented by a search of the grey literature [@ott2022protocolnetworkmetaanalysis]. The use of a rapid review methodology is a limitation that the authors acknowledge. In particular, the inability to validate the search strategy and screening process employed by the reviews whose results were leveraged. Another limitation is the choice to undertake data extraction by a single reviewer. Although an experienced reviewer always double checked the accuracy of this data extraction, this method may not be as rigorous as independent, double extracted data.
+
+A residual Other component was included in the analysis to account for the presence of other active components that might be included in program, but were outside the scope of this review. However, this was not pre-specified in the protocol, and these components were not specifically searched for. If they had been, additional programs that could have potentially changed the structure of the network may have been identified. That said, the decision to include is residual component allowed for the ability to control an important source bias to a point, but this concern prevented further exploration of these individual residual elements or their impact.
+
+Following what was specified in the protocol, participant outcomes were assessed at the last point at which they were reported. This decision may bias results toward the null hypothesis because some components of employment and skills programs may potentially speed up the process of attaining employment, with the comparison condition catching up over time [@groh2016wagesubsidiesprovide; @mckenzie2017howeffectiveare]. Consequently, the potential for included components to attain employment earlier may have been underestimated.
+
+Most studies included very limited information about the mechanics of a program or its theory of change. This limited the authors’ ability to discern what participants received and whether it might be translatable to another context. Few studies adequately described their comparison conditions, often comparing interventions to Services as Usual without detailing what these usual services entail for typical participants. Such information is crucial for evaluating study heterogeneity and determining their appropriateness for quantitative synthesis. Another omission was that many studies did not report continuous quantitative results with measures of variability (SD or SE). This meant that they could not be transformed into a standardised effect size. This prevented an analysis of two outcomes from being undertaken. However, technical reports from applied research institutions like MDRC and Mathematica stand out as exceptions and consistently reported the level of detail necessary to advance knowledge in this field.
+
+## Conclusion
+
+The primary goal of this review was to inform the first iteration of YFF’s toolkit. In doing so, the authors applied pragmatic methods to identify relevant studies. There are numerous opportunities for future research to strengthen the evidence base, particularly by undertaking primary research outside the United States. There are also opportunities to repeat and extend the methods used in this review to provide additional insights on the impact of other components of employment and skills programs.
+
+CNMA provides unique insights for program designers and policymakers that would not be available using other methods. The major benefit of a CNMA is its ability to disentangle the relative contribution of each component and assess their effect in combination or alone. As a result, the findings of a CNMA can provide program designers and policy makers with guidance on what components might be best to implement and test.
+
+::: landscape
+```{r}
+#| label: tbl-included-studies
+#| echo: false
+#| tbl-cap: "Details of included studies"
+
+# create a table of included studies
+included_studies_table_data <- tribble(
+  ~Reference, ~`Intervention Name`, ~`Study details`, ~`Intervention components`, ~`Comparison components`, ~Outcomes,
+  
+  "Alegre et al. (2015)", "PQPI", 
+  "Design: Non-randomised; Location: Spain; Population with additional barriers: No; Study confidence: Low; Sample size: not reported (Intervention: n=1220; Comparison: not reported)", 
+  "Off-the-Job Training; On-the-Job Training; Other", 
+  "Services as Usual", 
+  "Employment status",
+  
+  "Bauer et al. (2014)", "New York City Justice Corps", 
+  "Design: Randomised; Location: United States; Population with additional barriers: Yes; Study confidence: Medium; Sample size: n=553 (Intervention: n=291; Comparison: n=242)", 
+  "Basic Skills Training; Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; High school (or equiv.) completion; Vocational Education commencement",
+  
+  "Bloom et al. (1993)", "Job Training Partnership Act (JTPA) --- Classroom training", 
+  "Design: Randomised; Location: United States; Population with additional barriers: No; Study confidence: Medium; Sample size: n=1571 (Intervention: not reported; Comparison: not reported)", 
+  "Basic Skills Training; Off-the-Job Training; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; Hours worked; High school (or equiv.) completion",
+  
+  "Bloom et al. (1993)", "Job Training Partnership Act (JTPA) --- OJT/JSA", 
+  "Design: Randomised; Location: United States; Population with additional barriers: No; Study confidence: Medium; Sample size: n=1160 (Intervention: not reported; Comparison: not reported)", 
+  "On-the-Job Training; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; Hours worked; High school (or equiv.) completion",
+  
+  "Bloom et al. (1993)", "Job Training Partnership Act (JTPA) --- Other services", 
+  "Design: Randomised; Location: United States; Population with additional barriers: No; Study confidence: Low; Sample size: n=1317 (Intervention: not reported; Comparison: not reported)", 
+  "Basic Skills Training; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; Hours worked; High school (or equiv.) completion",
+  
+  "Brunetti & Corsini (2017)", "Workplace Training Programs", 
+  "Design: Randomised; Location: Italy; Population with additional barriers: No; Study confidence: Low; Sample size: n=4087 (Intervention: n=252; Comparison: n=3835)", 
+  "On-the-Job Training", 
+  "Services as Usual", 
+  "Employment status",
+  
+  "Centeno et al. (2008)", "Inserjovem", 
+  "Design: Non-randomised; Location: Portugal; Population with additional barriers: No; Study confidence: Low; Sample size: n=35,390 (Intervention: n=10,879; Comparison: n=24,511)", 
+  "Basic Skills Training; Off-the-Job Training; Other", 
+  "Services as Usual", 
+  "Employment status",
+  
+  "Caliendo et al. (2011)", "Preparatory Training (PT)", 
+  "Design: Non-randomised; Location: Germany; Population with additional barriers: No; Study confidence: Medium; Sample size: not reported (Intervention: n=1522; Comparison: not reported)", 
+  "Basic Skills Training; Other", 
+  "Services as Usual", 
+  "Employment status",
+  
+  "Caliendo et al. (2011)", "Short-Term Training (STT)", 
+  "Design: Non-randomised; Location: Germany; Population with additional barriers: No; Study confidence: Medium; Sample size: not reported (Intervention: n=2864; Comparison: not reported)", 
+  "Basic Skills Training", 
+  "Services as Usual", 
+  "Employment status",
+  
+  "Caliendo et al. (2011)", "Further Training Measures (FTM)", 
+  "Design: Non-randomised; Location: Germany; Population with additional barriers: No; Study confidence: Medium; Sample size: not reported (Intervention: n=924; Comparison: not reported)", 
+  "On-the-Job Training", 
+  "Services as Usual", 
+  "Employment status",
+  
+  "Cave et al. (1993)", "JOBSTART Demonstration", 
+  "Design: Randomised; Location: United States; Population with additional barriers: No; Study confidence: High; Sample size: n=1941 (Intervention: n=988; Comparison: n=953)", 
+  "Basic Skills Training; Life Skills Training; Off-the-Job Training; Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; Hours worked",
+  
+  "Courtney et al. (2011)", "Massachusetts Adolescent Outreach Program", 
+  "Design: Randomised; Location: United States; Population with additional barriers: Yes; Study confidence: Low; Sample size: n=179 (Intervention: n=88; Comparison: n=91)", 
+  "Life Skills Training; Coaching and Mentoring; Other", 
+  "Other", 
+  "Employment status; Wages or earnings; High school (or equiv.) completion",
+  
+  "Courtney et al. (2019)", "YV LifeSet", 
+  "Design: Randomised; Location: United States; Population with additional barriers: Yes; Study confidence: High; Sample size: n=1114 (Intervention: n=659; Comparison: n=455)", 
+  "Life Skills Training; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; High school (or equiv.) completion",
+  
+  "Canzian et al. (2020)", "Work experience for young people (WIJ!)", 
+  "Design: Non-randomised; Location: Belgium; Population with additional barriers: No; Study confidence: Low; Sample size: n=68,046 (Intervention: n=4935; Comparison: n=63,111)", 
+  "Life Skills Training; Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status",
+  
+  "Davis & Heller (2017)", "One Summer Chicago Plus --- 2012", 
+  "Design: Randomised; Location: United States; Population with additional barriers: Yes; Study confidence: Medium; Sample size: n=1334 (Intervention: n=591; Comparison: n=743)", 
+  "Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings",
+  
+  "Davis & Heller (2017)", "One Summer Chicago Plus --- 2013", 
+  "Design: Randomised; Location: United States; Population with additional barriers: Yes; Study confidence: Medium; Sample size: n=3742 (Intervention: n=1870; Comparison: n=1872)", 
+  "Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings",
+  
+  "Donato et al. (2018)", "Vocational Training, Piedmont", 
+  "Design: Non-randomised; Location: Italy; Population with additional barriers: No; Study confidence: Low; Sample size: n=1217 (Intervention: n=601; Comparison: n=606)", 
+  "Off-the-Job Training", 
+  "Other", 
+  "Employment status",
+  
+  "De Giorgi (2005)", "New Deal for Young People", 
+  "Design: Non-randomised; Location: United Kingdom; Population with additional barriers: No; Study confidence: Low; Sample size: not reported (Intervention: n=895; Comparison: not reported)", 
+  "Basic Skills Training; Other", 
+  "Services as Usual", 
+  "Employment status",
+  
+  "Duarte et al. (2020)", "Youth Employment Initiative", 
+  "Design: Non-randomised; Location: Portugal; Population with additional barriers: No; Study confidence: Low; Sample size: not reported (Intervention: n=42,044; Comparison: not reported)", 
+  "Off-the-Job Training; On-the-Job Training; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings",
+  
+  "Ehlert et al. (2012)", "Temporary Work ALMP", 
+  "Design: Non-randomised; Location: Germany; Population with additional barriers: No; Study confidence: Low; Sample size: n=314 (Intervention: n=211; Comparison: n=103)", 
+  "Basic Skills Training; Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status",
+  
+  "Fein & Hamadyk (2018)", "Year Up, Multi-site", 
+  "Design: Randomised; Location: United States; Population with additional barriers: No; Study confidence: Low; Sample size: n=2496 (Intervention: n=1638; Comparison: n=858)", 
+  "Basic Skills Training; Life Skills Training; Off-the-Job Training; Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Wages or earnings; Hours worked",
+  
+  "Fraker et al. (2018)", "Youth Transition Demonstration Evaluation, Transition WORKS, Erie County, NY", 
+  "Design: Randomised; Location: United States; Population with additional barriers: Yes; Study confidence: Medium; Sample size: n=718 (Intervention: n=397; Comparison: n=321)", 
+  "Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; Hours worked; High school (or equiv.) completion",
+  
+  "Fraker et al. (2018)", "Youth Transition Demonstration Evaluation, Broadened Horizons, Brighter Futures, Miami-Dade County, NY", 
+  "Design: Randomised; Location: United States; Population with additional barriers: Yes; Study confidence: Medium; Sample size: n=685 (Intervention: n=375; Comparison: n=310)", 
+  "Life Skills Training; Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; Hours worked; High school (or equiv.) completion",
+  
+  "Fraker et al. (2018)", "Youth Transition Demonstration Evaluation, YTDP, Bronx NY", 
+  "Design: Randomised; Location: United States; Population with additional barriers: Yes; Study confidence: High; Sample size: n=740 (Intervention: n=420; Comparison: n=320)", 
+  "Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; Hours worked; High school (or equiv.) completion",
+  
+  "Fraker et al. (2018)", "Youth Transition Demonstration Evaluation, Career Transition Program, Montgomery County, MD", 
+  "Design: Randomised; Location: United States; Population with additional barriers: Yes; Study confidence: Medium; Sample size: n=595 (Intervention: n=320; Comparison: n=275)", 
+  "Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; Hours worked; High school (or equiv.) completion",
+  
+  "Fraker et al. (2018)", "Youth Transition Demonstration Evaluation, Youth Works, West Virginia", 
+  "Design: Randomised; Location: United States; Population with additional barriers: Yes; Study confidence: High; Sample size: n=676 (Intervention: n=365; Comparison: n=311)", 
+  "Life Skills Training; Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; Hours worked; High school (or equiv.) completion",
+  
+  "Geckeler et al. (2017)", "Los Angeles Reconnections Career Academy (LARCA)", 
+  "Design: Randomised; Location: United States; Population with additional barriers: No; Study confidence: High; Sample size: n=1247 (Intervention: n=649; Comparison: n=598)", 
+  "Life Skills Training; Off-the-Job Training; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; High school (or equiv.) completion",
+  
+  "Gupta et al. (2016)", "Linking Innovation, Knowledge, and Employment Program (@LIKE)", 
+  "Design: Non-randomised; Location: United States; Population with additional barriers: No; Study confidence: Low; Sample size: n=7387 (Intervention: n=644; Comparison: n=6743)", 
+  "Basic Skills Training; Life Skills Training; Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status; High school (or equiv.) completion",
+  
+  "Hämäläinen & Tuomala (2008)", "Labour Market Training", 
+  "Design: Non-randomised; Location: Finland; Population with additional barriers: No; Study confidence: Low; Sample size: n=32,355 (Intervention: n=17,030; Comparison: n=15,325)", 
+  "Basic Skills Training; Off-the-Job Training", 
+  "Services as Usual", 
+  "Employment status",
+  
+  "Hollenbeck & Huang (2006)", "High School Career and Technical Education Programs, Washington --- 2006", 
+  "Design: Non-randomised; Location: United States; Population with additional barriers: No; Study confidence: Low; Sample size: n=51,076 (Intervention: n=25,538; Comparison: 25,538)", 
+  "Off-the-Job Training", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; Hours worked",
+  
+  "Hollenbeck & Huang (2006)", "Workforce Investment Act, Youth Program, Washington --- 2006", 
+  "Design: Non-randomised; Location: United States; Population with additional barriers: No; Study confidence: Low; Sample size: n=10,769 (Intervention: n=5398; Comparison: n=5398)", 
+  "Coaching and Mentoring; Other", 
+  "Other", 
+  "Employment status; Wages or earnings; Hours worked",
+  
+  "Hollenbeck & Huang (2006)", "Workforce Investment Act, Apprenticeship Programs --- 2006", 
+  "Design: Non-randomised; Location: United States; Population with additional barriers: No; Study confidence: Medium; Sample size: 10,608 (Intervention: n=5304; Comparison: 5304)", 
+  "Apprenticeships", 
+  "Other", 
+  "Employment status; Wages or earnings; Hours worked",
+  
+  "Hollenbeck & Huang (2016)", "High School Career and Technical Education Programs, Washington --- 2016", 
+  "Design: Non-randomised; Location: United States; Population with additional barriers: No; Study confidence: Low; Sample size: n=131,708 (Intervention: n=67,520; Comparison: n=64,188)", 
+  "Off-the-Job Training", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; Hours worked",
+  
+  "Hollenbeck & Huang (2016)", "Workforce Investment Act, Youth Program, Washington --- 2016", 
+  "Design: Non-randomised; Location: United States; Population with additional barriers: No; Study confidence: Medium; Sample size: n=6746 (Intervention: n=3373; Comparison: n=3373)", 
+  "Coaching and Mentoring; Other", 
+  "Other", 
+  "Employment status; Wages or earnings; Hours worked",
+  
+  "Hollenbeck & Huang (2016)", "Workforce Investment Act, Apprenticeship Programs --- 2016", 
+  "Design: Non-randomised; Location: United States; Population with additional barriers: No; Study confidence: Medium; Sample size: n=12,572 (Intervention: n=6286; Comparison: n=6286)", 
+  "Apprenticeships", 
+  "Other", 
+  "Employment status; Wages or earnings; Hours worked",
+  
+  "Izzo et al. (2000)", "Extended Transition Services", 
+  "Design: Randomised; Location: United States; Population with additional barriers: Yes; Study confidence: Low; Sample size: n=47 (Intervention: n=30; Comparison: n=17)", 
+  "Life Skills Training; Off-the-Job Training; Other", 
+  "Off-the-Job Training", 
+  "Employment status; Wages or earnings",
+  
+  "Jastrzab et al. (1996)", "Youth Conservation and Service Corps", 
+  "Design: Randomised; Location: United States; Population with additional barriers: No; Study confidence: Low; Sample size: n=2382 (Intervention: not reported; Comparison: not reported)", 
+  "Life Skills Training", 
+  "Services as Usual", 
+  "Employment status; Hours worked",
+  
+  "Kim et al. (2019)", "Independent Living Services", 
+  "Design: Non-randomised; Location: United States; Population with additional barriers: Yes; Study confidence: Low; Sample size: n=4206 (Intervention: n=2757; Comparison: n=1149)", 
+  "Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status; High school (or equiv.) completion",
+  
+  "Kopečná (2016)", "Youth Guarantee", 
+  "Design: Non-randomised; Location: Czechia; Population with additional barriers: No; Study confidence: Low; Sample size: n=1503 (Intervention: n=772; Comparison: n=731)", 
+  "On-the-Job Training", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings",
+  
+  "Larsson (2003)", "Youth Practice", 
+  "Design: Non-randomised; Location: Sweden; Population with additional barriers: No; Study confidence: Medium; Sample size: n=2810 (Intervention: n=606; Comparison: n=2204)", 
+  "Basic Skills Training; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings",
+  
+  "Maibom et al. (2014)", "Danish Active Labor Market Policies (ALMPs) for Uneducated Youth", 
+  "Design: Randomised; Location: Denmark; Population with additional barriers: No; Study confidence: Low; Sample size: n=2268 (Intervention: n=1115; Comparison: n=1153)", 
+  "Basic Skills Training; Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status",
+  
+  "Maibom et al. (2014)", "Danish Active Labor Market Policies (ALMPs) for Educated Youth", 
+  "Design: Randomised; Location: Denmark; Population with additional barriers: No; Study confidence: Low; Sample size: n=1112 (Intervention: n=568; Comparison: n=544)", 
+  "Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status",
+  
+  "McClanahan et al. (2004)", "Summer Career Exploration Program (SCEP)", 
+  "Design: Randomised; Location: United States; Population with additional barriers: No; Study confidence: Low; Sample size: n=1574 (Intervention: n=1076; Comparison: n=498)", 
+  "Life Skills Training; Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; Hours worked",
+  
+  "Millenky et al. (2014)", "National Guard Youth ChalleNGe", 
+  "Design: Randomised; Location: United States; Population with additional barriers: Yes; Study confidence: High; Sample size: n=1173 (Intervention: n=722; Comparison: n=451)", 
+  "Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; High school (or equiv.) completion",
+  
+  "Miller et al. (2018)", "YouthBuild", 
+  "Design: Randomised; Location: United States; Population with additional barriers: No; Study confidence: High; Sample size: n=3929 (Intervention: n=1794; Comparison: n=937)", 
+  "Basic Skills Training; Life Skills Training; Off-the-Job Training; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; High school (or equiv.) completion; Vocational Education commencement; University commencement",
+  
+  "Miller et al. (2005)", "Centre for Employment Training Replication, San Jose", 
+  "Design: Randomised; Location: United States; Population with additional barriers: No; Study confidence: High; Sample size: n=1136 (Intervention: n=595; Comparison: n=541)", 
+  "Basic Skills Training; Off-the-Job Training; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; Hours worked; High school (or equiv.) completion",
+  
+  "Muñoz-Repiso & Braza (2011)", "Training Schools Program", 
+  "Design: Non-randomised; Location: Spain; Population with additional barriers: No; Study confidence: Low; Sample size: n=225 (Intervention: n=150; Comparison: n=75)", 
+  "Off-the-Job Training", 
+  "Services as Usual", 
+  "Employment status",
+  
+  "Pastore & Pompili (2019)", "PIPOL, Training", 
+  "Design: Non-randomised; Location: Italy; Population with additional barriers: No; Study confidence: Medium; Sample size: n=10,964 (Intervention: n=1798; Comparison: n=9166)", 
+  "Off-the-Job Training", 
+  "Services as Usual", 
+  "Employment status",
+  
+  "Price et al. (2011)", "Youth Corps", 
+  "Design: Randomised; Location: United States; Population with additional barriers: No; Study confidence: Low; Sample size: n=1349 (Intervention: n=935; Comparison: n=414)", 
+  "Life Skills Training; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; University commencement",
+  
+  "Quint et al. (1997)", "New Chance", 
+  "Design: Randomised; Location: United States; Population with additional barriers: Yes; Study confidence: High; Sample size: n=2079 (Intervention: n=1401; Comparison: n=678)", 
+  "Basic Skills Training; Life Skills Training; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; Hours worked; High school (or equiv.) completion; Vocational Education commencement",
+  
+  "Roder & Elliott (2014)", "Year Up, Pilot Study", 
+  "Design: Randomised; Location: United States; Population with additional barriers: No; Study confidence: Low; Sample size: n=164 (Intervention: n=120; Comparison: n=44)", 
+  "Basic Skills Training; Life Skills Training; Off-the-Job Training; Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; Hours worked",
+  
+  "Rosholm et al. (2019)", "Bridging the Gap between Welfare and Education", 
+  "Design: Non-randomised; Location: Denmark; Population with additional barriers: No; Study confidence: Low; Sample size: not reported (Intervention: n=2405; Comparison: n=not reported)", 
+  "Basic Skills Training; Life Skills Training; Coaching and Mentoring; Other", 
+  "Off-the-Job Training; On-the-Job Training; Other", 
+  "Employment status; High school (or equiv.) completion",
+  
+  "Schaeffer et al. (2014)", "Community Restitution Apprenticeship-Focused Training", 
+  "Design: Randomised; Location: United States; Population with additional barriers: Yes; Study confidence: Low; Sample size: n=97 (Intervention: n=50; Comparison: n=47)", 
+  "Basic Skills Training; Off-the-Job Training; Other", 
+  "Services as Usual", 
+  "Employment status; Hours worked; High school (or equiv.) completion",
+  
+  "Schochet et al. (2008)", "Job Corps", 
+  "Design: Randomised; Location: United States; Population with additional barriers: No; Study confidence: High; Sample size: n=11,313 (Intervention: n=6,828; Comparison: n=4,485)", 
+  "Basic Skills Training; Off-the-Job Training; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; Hours worked; High school (or equiv.) completion; Vocational Education commencement; University commencement",
+  
+  "Stromback (2010)", "Vocational Education and Training", 
+  "Design: Non-randomised; Location: Australia; Population with additional barriers: No; Study confidence: Low; Sample size: not reported (Intervention: not reported; Comparison: not reported)", 
+  "Off-the-Job Training", 
+  "Services as Usual", 
+  "Wages or earnings",
+  
+  "Theodos et al. (2017)", "Urban Alliance High School Internship Program", 
+  "Design: Randomised; Location: United States; Population with additional barriers: No; Study confidence: Low; Sample size: n=555 (Intervention: not reported; Comparison: not reported)", 
+  "Life Skills Training; Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; High school (or equiv.) completion",
+  
+  "Wasserman et al. (2019)", "Bridges to Pathways", 
+  "Design: Randomised; Location: United States; Population with additional barriers: No; Study confidence: Low; Sample size: n=228 (Intervention: n=137; Comparison: n=91)", 
+  "Life Skills Training; Coaching and Mentoring; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings; Hours worked; High school (or equiv.) completion; Vocational Education commencement",
+  
+  "Wehman et al. (2017)", "Project SEARCH, plus ASD supports", 
+  "Design: Randomised; Location: United States; Population with additional barriers: Yes; Study confidence: Low; Sample size: n=49 (Intervention: n=31; Comparison: n=18)", 
+  "On-the-Job Training; Other", 
+  "Services as Usual", 
+  "Employment status; Wages or earnings"
+)
+
+# produce table
+included_studies_table_data |> 
+  kable(
+    escape = FALSE,
+    booktabs = TRUE
+    ) |>
+  kableExtra::column_spec(1, width = "2cm") |>
+  kableExtra::column_spec(2, width = "2.5cm") |>
+  kableExtra::column_spec(3, width = "6cm") |>
+  kableExtra::column_spec(4, width = "2.5cm") |>
+  kableExtra::column_spec(5, width = "2.5cm") |>
+  kableExtra::column_spec(6, width = "2.5cm") |>
+  kableExtra::row_spec(0, bold = TRUE) |>
+  kable_styling(
+    latex_options = c(
+      "repeat_header"),
+      font_size = 8
+  )
+```
+:::
+
+# References

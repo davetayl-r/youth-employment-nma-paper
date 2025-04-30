@@ -8,6 +8,7 @@ library(netmeta)
 library(ggplot2)
 library(scales)
 library(viscomp)
+library(showtext)
 
 # load required data
 employment_component_es_data_location <- "./network-meta/nma/data/employment_analysis_data.RDS"
@@ -60,9 +61,9 @@ component_combination_labels <- c(
   )
 
 png(
-  file = "./network-meta/visualisation/output/nma_employment_standard.png",
-  width = 29,
-  height = 12,
+  file = "./network-meta/visualisation/output/nma_employment_standard2.png",
+  width = 26,
+  height = 10,
   units = "cm",
   res = 1200,
   type = "cairo-png"
@@ -82,6 +83,35 @@ forest(employment_network_meta_random_effects,
    label.left = "Favours Usual Services",
    label.right = "Favours Intervention",
    drop.reference.group = TRUE)
+
+dev.off()
+
+# version for manuscript and thesis supplementary material
+
+png(
+  file = "./manuscript/inputs/figure/nma_employment_standard.png",
+  width = 26,
+  height = 10,
+  units = "cm",
+  res = 1200,
+  type = "cairo-png"
+) 
+
+forest(employment_network_meta_random_effects,
+       studlab = component_combination_labels,
+       reference.group = "SAU",
+       col.by = "black",
+       xlim = c(-1, 1.5),
+       addrow.subgroups = FALSE,
+       fontsize = 10,
+       fontfamily = "Roboto",
+       spacing = 0.7,
+       leftcols = c("studlab", "prop.direct"),
+       equal.size = FALSE,
+       sortvar = -"TE",
+       label.left = "Favours Usual Services",
+       label.right = "Favours Intervention",
+       drop.reference.group = TRUE)
 
 dev.off()
 
